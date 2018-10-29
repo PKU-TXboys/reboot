@@ -15,5 +15,41 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "云开发 QuickStart",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "homepage",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "search",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search_selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "add",
+        "iconPath": "images/add.png",
+        "selectedIconPath": "images/add_selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "room",
+        "iconPath": "images/section.png",
+        "selectedIconPath": "images/section_selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "profile",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile_selected.png"
+      }
+    ],
+    "backgroundColor": "#f6f6f6",
+    "selectedColor": "lightgreen"
   }
 }
