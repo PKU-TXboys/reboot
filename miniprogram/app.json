@@ -22,12 +22,7 @@
   },
   "tabBar": {
     "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "homepage",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home_selected.png"
-      },
+
       {
         "pagePath": "pages/forum/forum",
         "text": "forum",

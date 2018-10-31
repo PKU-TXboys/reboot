@@ -17,3 +17,10 @@ App({
 
   coolsite360: coolsite360
 })
+
+// {
+//   "pagePath": "pages/index/index",
+//     "text": "homepage",
+//       "iconPath": "images/home.png",
+//         "selectedIconPath": "images/home_selected.png"
+// },
