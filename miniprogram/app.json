@@ -7,13 +7,17 @@
     "pages/databaseGuide/databaseGuide",
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib"
+    "pages/chooseLib/chooseLib",
+    "pages/forum/forum",
+    "pages/home/home",
+    "pages/activity/activity",
+    "pages/topic/topic"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "Reboot",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -25,26 +29,20 @@
         "selectedIconPath": "images/home_selected.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "search",
+        "pagePath": "pages/forum/forum",
+        "text": "forum",
         "iconPath": "images/search.png",
         "selectedIconPath": "images/search_selected.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "add",
-        "iconPath": "images/add.png",
-        "selectedIconPath": "images/add_selected.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "room",
+        "pagePath": "pages/activity/activity",
+        "text": "activity",
         "iconPath": "images/section.png",
         "selectedIconPath": "images/section_selected.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "profile",
+        "pagePath": "pages/home/home",
+        "text": "home",
         "iconPath": "images/profile.png",
         "selectedIconPath": "images/profile_selected.png"
       }

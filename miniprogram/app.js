@@ -1,4 +1,6 @@
 //app.js
+var coolsite360 = require('./coolsite/index.js');
+
 App({
   onLaunch: function () {
     
@@ -11,5 +13,7 @@ App({
     }
 
     this.globalData = {}
-  }
+  },
+
+  coolsite360: coolsite360
 })
