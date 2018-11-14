@@ -66,7 +66,7 @@ APP
 	"open_id": "str",
 	"username": "str",
 	"pic": "url",
-	"watch_list":[rooms],
+	"watch_list":[topics],
 	"appointments":[appointments]
 }
 
