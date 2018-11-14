@@ -44,9 +44,9 @@ APP
 	"img":["fileID"],
 }
 
-讨论信息post
+讨论信息topic
 {
-	"post_id" : 12345,
+	"topic_id" : 12345,
 	"title" : "str",
 	"description": "str",
 	"content":"str",
@@ -58,7 +58,7 @@ APP
 
 论坛列表forum
 {
-	"list":[posts]
+	"list":[topics]
 }
 
 个人信息user_info
@@ -107,25 +107,25 @@ data:{}
 return:forum
 
 获取某个帖子信息
-function getPost
+function getTopic
 data:{
-	post_id:1
+	topic_id:1
 }
-return:post
+return:topic
 
 发帖 //上传数据库
-function post
-data:post
+function topic
+data:topic
 return:{
 	success:true
-	post_id:1
+	topic_id:1
 }
 
 回帖
 function reply
 data:{
 	reply
-	post_id:1
+	topic_id:1
 }
 return:{
 	success:true
@@ -135,16 +135,16 @@ return:{
 function modify
 data:{
 	reply
-	post_id:1
+	topic_id:1
 }
 return:{
 	success:true
 }
 
 删帖
-function deletePost
+function deleteTopic
 data:{
-	post_id:1
+	topic_id:1
 	replyIndex:1
 }
 return:{
@@ -153,7 +153,7 @@ return:{
 给帖子点赞
 function like
 data:{
-	post_id:1
+	topic_id:1
 }
 return:{
 	success:true
@@ -214,7 +214,7 @@ data:{
 	open_id:'sadsadsadas'
 }
 return:{
-	list:[posts]
+	list:[topics]
 }
 
 获取个人预约活动列表
