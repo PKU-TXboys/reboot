@@ -11,7 +11,9 @@
     "pages/forum/forum",
     "pages/home/home",
     "pages/activity/activity",
-    "pages/topic/topic"
+    "pages/topic/topic",
+    "pages/activitylist/activitylist",
+    "pages/forumlist/forumlist"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -22,7 +24,6 @@
   },
   "tabBar": {
     "list": [
-
       {
         "pagePath": "pages/forum/forum",
         "text": "forum",

@@ -36,14 +36,193 @@ APP
 
 ### 数据库
 
-* forum
-  * title
-  * description
-  * attachment
-  * user
-  * like
-* activity
-  * time
-  * place
-  * member
-  * reservation_table
+```json
+回帖信息comment
+{
+	"user":user_info,
+	"content":"str",
+	"img":["fileID"],
+}
+
+讨论信息post
+{
+	"post_id" : 12345,
+	"title" : "str",
+	"description": "str",
+	"content":"str",
+	"owner": user_info,
+	"img":["fildID",],
+	"comment":[comments],
+	"like": 1,
+}
+
+论坛列表forum
+{
+	"list":[posts]
+}
+
+个人信息user_info
+{
+	"open_id": "str",
+	"username": "str",
+	"pic": "url",
+	"watch_list":[rooms],
+	"appointments":[appointments]
+}
+
+活动列表activity_list
+{
+	"list":[activities]
+}
+
+活动信息activity
+{
+	"activity_id":1
+	"title":"str",
+	"time":"date",
+	"description":"str",
+	"location":"str",
+	"appointment":[appointment]
+}
+
+预约信息appointment
+{
+	"name":"str",
+	"major":"str",
+	"grade":"str",
+	"time":"date",
+	"description":"str",
+	"computer":"str", //电脑型号
+	"phone_number":"str"
+}
+```
+
+* API
+```javascript
+APi列表
+
+获取论坛列表
+function getForumList
+data:{}
+return:forum
+
+获取某个帖子信息
+function getPost
+data:{
+	post_id:1
+}
+return:post
+
+发帖 //上传数据库
+function post
+data:post
+return:{
+	success:true
+	post_id:1
+}
+
+回帖
+function reply
+data:{
+	reply
+	post_id:1
+}
+return:{
+	success:true
+}
+
+改帖
+function modify
+data:{
+	reply
+	post_id:1
+}
+return:{
+	success:true
+}
+
+删帖
+function deletePost
+data:{
+	post_id:1
+	replyIndex:1
+}
+return:{
+	success:true
+}
+给帖子点赞
+function like
+data:{
+	post_id:1
+}
+return:{
+	success:true
+}
+
+获取活动列表
+function getActivityList
+data:{}
+return:activity_list
+
+获取某个活动信息
+function getActivity
+data:{
+	activity_id:1
+}
+return:activity
+
+申请预约
+function makeAppointment
+data:{
+	activity_id:1
+	appointment
+}
+return{
+	success:true
+}
+
+修改预约
+function modifyAppointment
+data:{
+	activity_id:1
+	appointment
+}
+return{
+	success:true
+}
+
+取消预约
+function cancelAppointment
+data:{
+	activity_id:1
+	appointment_index:1
+}
+return:{
+	success:true
+}
+
+获取个人信息
+function getUserInfo
+data:{
+	open_id:'sadsdasdasd'
+}
+return:user_info
+
+获取个人关注列表
+function getUserWatch
+data:{
+	open_id:'sadsadsadas'
+}
+return:{
+	list:[posts]
+}
+
+获取个人预约活动列表
+function getUserAppointment
+data:{
+	open_id:'saddsadasds'
+}
+return:{
+	list:[appointments]
+}
+```
