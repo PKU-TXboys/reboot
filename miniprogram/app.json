@@ -12,8 +12,9 @@
     "pages/home/home",
     "pages/activity/activity",
     "pages/topic/topic",
-    "pages/activitylist/activitylist",
-    "pages/forumlist/forumlist"
+    "pages/myactivity/myactivity",
+    "pages/mytopic/mytopic",
+    "pages/activitylist/activitylist"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -31,7 +32,7 @@
         "selectedIconPath": "images/search_selected.png"
       },
       {
-        "pagePath": "pages/activity/activity",
+        "pagePath": "pages/activitylist/activitylist",
         "text": "activity",
         "iconPath": "images/section.png",
         "selectedIconPath": "images/section_selected.png"

@@ -1,4 +1,4 @@
-// pages/forumlist/forumlist.js
+// pages/mytopic/mytopic.js
 Page({
 
   /**

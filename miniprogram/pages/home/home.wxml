@@ -8,14 +8,14 @@
 <text class="c-block wx-text_LxIAqX" data-c_e_id="wx_text_d9b4876d">name</text>
 <view class="c-minheight wx-view_7ini1F" data-c_e_id="wx_view_0ea40752"/>
 <view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewade02125">
-    <navigator class="listitem-navigator" data-c_e_id="wx_navigator198e0fe6" hover-class="navigator-hover" url="../forumlist/forumlist">
+    <navigator class="listitem-navigator" data-c_e_id="wx_navigator198e0fe6" hover-class="navigator-hover" url="../mytopic/mytopic">
         <view class="wx-view_cPj0ok2" data-c_e_id="wx_view916d4e22">
             <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text48cdb073">我参与的讨论</text>
         </view>
     </navigator>
 </view>
 <view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewade02125">
-    <navigator class="listitem-navigator" data-c_e_id="wx_navigator198e0fe6" hover-class="navigator-hover" url="../activitylist/activitylist">
+    <navigator class="listitem-navigator" data-c_e_id="wx_navigator198e0fe6" hover-class="navigator-hover" url="../myactivity/myactivity">
         <view class="wx-view_cPj0ok2" data-c_e_id="wx_view916d4e22">
             <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text48cdb073">我预约的活动</text>
         </view>
