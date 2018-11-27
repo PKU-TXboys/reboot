@@ -1,2 +1,46 @@
 <!--pages/activitylist/activitylist.wxml-->
-<text>pages/activitylist/activitylist.wxml</text>
+<view class='page'>
+  <view class="title">
+    <view>
+      <image src='../../images/logo.png'> </image>
+    </view>
+    <view>
+      <view>
+        <text>title</text>
+      </view>
+      <view>
+        <text>description</text>
+      </view>
+    </view>
+  </view>
+  <!--
+    预约表格
+  -->
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">编号</view>
+      <view class="th">时间</view>
+      <view class="th ">维修状态</view>
+    </view>
+    <block wx:for="{{listData}}" wx:key="{{code}}">
+      <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+        <view class="td">{{item.code}}</view>
+        <view class="td">{{item.text}}</view>
+        <view class="td">{{item.type}}</view>
+      </view>
+      <view class="tr" wx:else>
+        <view class="td">{{item.code}}</view>
+        <view class="td">{{item.text}}</view>
+        <view class="td">{{item.type}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="c-minheight bottomGrayboder wx-view_pOFBSt">
+    <navigator class='listitem-navigator' hover-class="navigator-hover" url='../reserve/reserve'>
+      <view class='wx-view_cPj0ok2'>
+        <text class="c-block c-ellipse wx-text_TvHPc92">预约</text>
+      </view>
+    </navigator>
+  </view>
+</view>
