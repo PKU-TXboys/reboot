@@ -21,15 +21,16 @@
 
 ```
 APP
-| - forum
-|	| - topic
-|	| - reply
-| - activity
-|	| - resevation
-| - home
-|	| - my_topic
-|	| - my_reservation
-|	| - modify
+| - forum					论坛页面
+|	| - topic				在讨论话题
+|	|	| - newtopic		发起新话题
+| - activitylist 			活动页面
+|	| - activity			活动信息
+|	| 	| - reserve			活动预约
+| - home					个人主页
+|	| - mytopic				我的话题
+|	| - myactivity			我的预约
+|	| - modify				修改信息
 ```
 
 

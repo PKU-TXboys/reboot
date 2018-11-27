@@ -14,7 +14,10 @@
     "pages/topic/topic",
     "pages/myactivity/myactivity",
     "pages/mytopic/mytopic",
-    "pages/activitylist/activitylist"
+    "pages/modify/modify",
+    "pages/activitylist/activitylist",
+    "pages/reserve/reserve",
+    "pages/newtopic/newtopic"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
