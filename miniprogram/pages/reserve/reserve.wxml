@@ -12,11 +12,11 @@
   <view class='form'>
     <form bindsubmit="formSubmit" bindreset="formReset">
       <view>
-        <view>姓名</view>
+        <view class='td'>姓名</view>
         <input type='text' name="name" placeholder="张XX" />
       </view>
       <view>
-        <view>类型</view>
+        <view class='td'>类型</view>
         <picker range='["硬件", "软件", "清灰"]'>
           <view class="picker">
             当前选择：
@@ -24,15 +24,15 @@
         </picker>
       </view>
       <view>
-        <view>联系方式</view>
+        <view class='td'>联系方式</view>
         <input type='text' name="grade" placeholder="手机号或微信号" />
       </view>
       <view>
-        <view>电脑型号</view>
+        <view class='td'>电脑型号</view>
         <input type='text' name="type" placeholder="如Thinkpad 430" />
       </view>
       <view>
-        <view>问题描述</view>
+        <view class='td'>问题描述</view>
         <textarea name="description" placeholder="问题描述" />
       </view>
       <view style='display:flex; margin:10px'>

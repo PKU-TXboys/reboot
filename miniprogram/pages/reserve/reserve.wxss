@@ -21,6 +21,10 @@
 }
 .form view{
   font-size: 14px;
+  padding: 3px;
+}
+.form .td{
+  background-color: #eee;
 }
 .form input{
   border: solid 1px;
