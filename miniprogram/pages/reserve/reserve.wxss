@@ -1,6 +1,7 @@
 /* pages/reserve/reserve.wxss */
 .page{
   padding: 10px;
+  
 }
 .title {
   display: flex;
