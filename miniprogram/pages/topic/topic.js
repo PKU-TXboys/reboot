@@ -16,7 +16,10 @@ Page({
    */
 
   data: {
-  
+    title:"question title",
+    reply_nums: 1,
+    replylist:[]
+
 
   
 
