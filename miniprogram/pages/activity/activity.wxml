@@ -34,22 +34,23 @@
         <view class="td">{{index + 1}}</view>
         <view class="td">{{item.time}}</view>
         <view class="td">{{item.type}}</view>
-        <view class="td" style='font-size:10px'>{{item.description}}</view>
+        <view class="td" style='font-size:12px; margin:5px;'>{{item.description}}</view>
       </view>
       <view class="tr" wx:else>
         <view class="td">{{index + 1}}</view>
         <view class="td">{{item.time}}</view>
         <view class="td">{{item.type}}</view>
-        <view class="td" style='font-size:12px'>{{item.description}}</view>
+        <view class="td" style='font-size:12px; margin:5px;'>{{item.description}}</view>
       </view>
     </block>
   </view>
+  <view style='height:4rem'></view>
+</view>
 
-  <view class="c-minheight bottomGrayboder wx-view_pOFBSt">
-    <navigator class='listitem-navigator' hover-class="navigator-hover" url='../reserve/reserve'>
-      <view>
-        <text class="c-block c-ellipse wx-text_TvHPc92">预约</text>
-      </view>
-    </navigator>
-  </view>
+<view class="bottom-fixed">
+  <navigator class='listitem-navigator' hover-class="navigator-hover" url='../reserve/reserve'>
+    <view style='width:100%'>
+      <text>活动预约</text>
+    </view>
+  </navigator>
 </view>

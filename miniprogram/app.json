@@ -1,6 +1,7 @@
 {
   "cloud": true,
   "pages": [
+    "pages/forum/forum",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -8,7 +9,6 @@
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
-    "pages/forum/forum",
     "pages/home/home",
     "pages/activity/activity",
     "pages/topic/topic",

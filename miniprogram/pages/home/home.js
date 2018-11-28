@@ -16,10 +16,10 @@ Page({
    */
 
   data: {
-  
-
-  
-
+    hidden: false,
+    nickname: 'name',
+    gender: 0,
+    avatar: 'http://qty83k.creatby.com/materials/136955/origin/ad607ddde1e291de9b19049db1817561_origin.jpg',
   
   },
 
@@ -29,6 +29,32 @@ Page({
   onLoad () {
     // 注册coolsite360交互模块
     app.coolsite360.register(this);
+    var that = this;
+    wx.getSetting({
+      success: res => {
+        console.log(res.authSetting)
+        if (res.authSetting['scope.userInfo']){
+          wx.getUserInfo({
+            success: function (res) {
+              var userInfo = res.userInfo
+              var nickName = userInfo.nickName
+              var avatarUrl = userInfo.avatarUrl
+              var gender = userInfo.gender //性别 0：未知、1：男、2：女
+              var province = userInfo.province
+              var city = userInfo.city
+              var country = userInfo.country
+              that.setData({
+                nickname: nickName,
+                gender: gender,
+                avatar: avatarUrl,
+                hidden: true
+              })
+            }
+          })
+        }
+      }
+    })
+    
   },
 
   /**
@@ -44,6 +70,32 @@ Page({
   onShow () {
     // 执行coolsite360交互组件展示
     app.coolsite360.onShow(this);
+    var that = this;
+    wx.getSetting({
+      success: res => {
+        console.log(res.authSetting)
+        if (res.authSetting['scope.userInfo']) {
+          wx.getUserInfo({
+            success: function (res) {
+              var userInfo = res.userInfo
+              var nickName = userInfo.nickName
+              var avatarUrl = userInfo.avatarUrl
+              var gender = userInfo.gender //性别 0：未知、1：男、2：女
+              var province = userInfo.province
+              var city = userInfo.city
+              var country = userInfo.country
+              that.setData({
+                nickname: nickName,
+                gender: gender,
+                avatar: avatarUrl,
+                hidden: true
+              });
+              that.globalData.avatar = avatarUrl;
+            }
+          })
+        }
+      }
+    })
   },
 
   /**
