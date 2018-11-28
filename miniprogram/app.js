@@ -11,11 +11,14 @@ App({
         traceUser: true,
       })
     }
-
-    this.globalData = {}
   },
 
-  coolsite360: coolsite360
+  coolsite360: coolsite360,
+
+  globalData:{
+    openid:'',
+    atavar:''
+  }
 })
 
 // {

@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    type: ["软件", "硬件", "清灰"],
+    picker_index: 0,
 
   },
 
@@ -62,5 +64,23 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  formSubmit: function(){
+    var that = this;
+  },
+
+  formReset: function(){
+    var that = this;
+    this.setData({
+      picker_index:0
+    });
+  },
+
+  bindPickerDateChange: function(e){
+    console.log(e);
+    this.setData({
+      picker_index: e.detail.value
+    })
   }
 })

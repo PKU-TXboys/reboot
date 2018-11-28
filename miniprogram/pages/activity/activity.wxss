@@ -1,1 +1,96 @@
 /* pages/activitylist/activitylist.wxss */
+.page{
+  padding: 10px;
+}
+.title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 8rem;
+  align-items: center;
+}
+.title image{
+  height: 5rem;
+  width: 5rem;
+  left: 0;
+  border-radius: 50%;
+  padding: 5px;
+}
+.title .titletext{
+  font-size: 24px;
+  padding: 1rem;
+}
+.title .time{
+  font-size: 14px;
+  padding-left: 1rem;
+}
+.title .location{
+  font-size: 14px;
+  padding-left: 1rem;
+}
+.title .description{
+  font-size: 12px;
+  padding-left: 1rem;
+}
+.table {
+  border: 0px solid darkgray;
+  margin-top: 1em;
+}
+.table .td{
+  font-size: 16px;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  min-height: 3rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #f0ffff;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  font-size: 18px;
+}
+.listitem-navigator{
+  background-color:#E6F3F9;
+  border-radius: 5px;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  height: 100%;
+}
+.navigator-hover{
+  background-color: #f8ffff;
+  border: solid 1px #eee;
+}
+.bottom-fixed{
+  width: 100%;
+  height: 3rem;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+.bottom-fixed text{
+  font-size: 18px;
+}

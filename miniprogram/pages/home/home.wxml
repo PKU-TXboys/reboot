@@ -1,11 +1,12 @@
 <view class="c-minheight wx-view_MgxPEf" data-c_e_id="wx_view_6951fc2c" width="100%">
     <view class="c-minheight wx-view_e6v7zi" data-c_e_id="wx_view5ee86b7b"/>
     <view class="c-minheight wx-view_e6v7zi" data-c_e_id="wx_view_86cf5135">
-        <image class="wx-image_4aufb4 wx-image_tBcdCT2" data-c_e_id="wx_image_3568466c" mode="scaleToFill" src="http://qty83k.creatby.com/materials/136955/origin/ad607ddde1e291de9b19049db1817561_origin.jpg" style="background-size:  100% 100%; background-position:  0% 0%; background-repeat:  no-repeat; background-image: url(http://qty83k.creatby.com/materials/136955/origin/ad607ddde1e291de9b19049db1817561_origin.jpg); "/>
+        <image class="wx-image_4aufb4 wx-image_tBcdCT2" data-c_e_id="wx_image_3568466c" mode="scaleToFill" src="{{avatar}}" style="background-size:  100% 100%; background-position:  0% 0%; background-repeat:  no-repeat; background-image: url(http://qty83k.creatby.com/materials/136955/origin/ad607ddde1e291de9b19049db1817561_origin.jpg); "/>
     </view>
     <view class="c-minheight wx-view_e6v7zi" data-c_e_id="wx_view1e490c81"/>
 </view>
-<text class="c-block wx-text_LxIAqX" data-c_e_id="wx_text_d9b4876d">name</text>
+<button open-type="getUserInfo" hidden='{{hidden}}' style='width:80%;margin-bottom:10px;'> 获取个人信息 </button>
+<text class="c-block wx-text_LxIAqX" data-c_e_id="wx_text_d9b4876d">{{nickname}}</text>
 <view class="c-minheight wx-view_7ini1F" data-c_e_id="wx_view_0ea40752"/>
 <view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewade02125">
     <navigator class="listitem-navigator" data-c_e_id="wx_navigator198e0fe6" hover-class="navigator-hover" url="../mytopic/mytopic">

@@ -1,2 +1,49 @@
 <!--pages/reserve/reserve.wxml-->
-<text>pages/reserve/reserve.wxml</text>
+<view class='page'>
+  <view class='title'>
+    <view>
+      <image src='../../images/logo.png'></image>
+    </view>
+    <view>
+      <text> 电脑小队预约 </text>
+    </view>
+  </view>
+  <!-- 预约表格 -->
+  <view class='form'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view>
+        <view class='td'>姓名</view>
+        <input type='text' name="name" placeholder="张XX" />
+      </view>
+      <view>
+        <view class='td'>类型</view>
+        <picker bindchange='bindPickerDateChange' value='{{picker_index}}' range='{{type}}'>
+          <view class="picker">
+            {{type[picker_index]}}
+          </view>
+        </picker>
+      </view>
+      <view>
+        <view class='td'>预约时间</view>
+        <!-- 我觉得用picker控制输入更好一些 -->
+        <input type='text' name="time" placeholder="如1:30" /> 
+      </view>
+      <view>
+        <view class='td'>联系方式</view>
+        <input type='text' name="grade" placeholder="手机号或微信号" />
+      </view>
+      <view>
+        <view class='td'>电脑型号</view>
+        <input type='text' name="type" placeholder="如Thinkpad 430" />
+      </view>
+      <view>
+        <view class='td'>问题描述</view>
+        <textarea name="description" placeholder="问题描述" />
+      </view>
+      <view style='display:flex; margin-top:10px; margin-bottom:10px'>
+        <button form-type="submit" style='margin-right:5px'>提交</button>
+        <button form-type="reset" style='margin-left:5px'>重置</button>
+      </view>
+    </form>
+  </view>
+</view>
