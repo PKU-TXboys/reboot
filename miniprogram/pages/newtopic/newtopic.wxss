@@ -1,1 +1,30 @@
-/* pages/newtopic/newtopic.wxss */
+.outer{
+  height:93%;
+}
+.title{
+  height:25%;
+  background-color: gainsboro;
+  border-radius: 20rpx;
+  margin:5%
+}
+.description{
+  height:75%;
+  background-color: gainsboro;
+  border-radius: 20rpx;
+  margin:5%
+}
+.bottom{
+  height:7%;
+  position:fixed;
+  bottom:0%;
+  display:flex;
+  flex-direction: row;
+  width:100%;background-color: white;
+}
+.picture{
+  width:50%;
+
+}
+.post{
+  width:50%;
+}
