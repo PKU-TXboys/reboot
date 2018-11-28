@@ -5,11 +5,14 @@
       <image src='../../images/logo.png'> </image>
     </view>
     <view>
-      <view>
-        <text>title</text>
+      <view class="titletext">
+        <text>{{activity_data.title}}</text>
       </view>
-      <view>
-        <text>description</text>
+      <view class='time'>
+        <text>时间：{{activity_data.time}}</text>
+      </view>
+      <view class='description'>
+        <text>{{activity_data.description}}</text>
       </view>
     </view>
   </view>
@@ -20,18 +23,21 @@
     <view class="tr bg-w">
       <view class="th">编号</view>
       <view class="th">时间</view>
-      <view class="th ">维修状态</view>
+      <view class="th ">问题类型</view>
+      <view class="th ">问题描述</view>
     </view>
-    <block wx:for="{{listData}}" wx:key="{{code}}">
+    <block wx:for="{{activity_data.appointment}}" wx:key="{{id}}">
       <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
-        <view class="td">{{item.code}}</view>
-        <view class="td">{{item.text}}</view>
+        <view class="td">{{index + 1}}</view>
+        <view class="td">{{item.time}}</view>
         <view class="td">{{item.type}}</view>
+        <view class="td" style='font-size:10px'>{{item.description}}</view>
       </view>
       <view class="tr" wx:else>
-        <view class="td">{{item.code}}</view>
-        <view class="td">{{item.text}}</view>
+        <view class="td">{{index + 1}}</view>
+        <view class="td">{{item.time}}</view>
         <view class="td">{{item.type}}</view>
+        <view class="td" style='font-size:10px'>{{item.description}}</view>
       </view>
     </block>
   </view>

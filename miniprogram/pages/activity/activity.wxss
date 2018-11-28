@@ -18,8 +18,17 @@
   left: 0;
   border-radius: 50%;
 }
-.title text{
-  font-size: 28;
+.title .titletext{
+  font-size: 20px;
+  padding: 1rem;
+}
+.title .time{
+  font-size: 14px;
+  padding-left: 1rem;
+}
+.title .description{
+  font-size: 12px;
+  padding-left: 1rem;
 }
 .tr {
   display: flex;
