@@ -1,0 +1,17 @@
+.outer{
+  position: fixed;
+  top:0%;
+  background-color: gainsboro;
+  width:100%;
+  height:100%;
+}
+.title{
+  background-color: white;
+}
+.reply{
+  background-color:white;
+  margin:1%;
+}
+.content{
+  
+}
