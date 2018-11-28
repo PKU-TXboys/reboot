@@ -1,2 +1,48 @@
-<!--pages/myactivity/myactivity.wxml-->
-<text>pages/myactivity/myactivity.wxml</text>
+<view class="listWrap" data-c_e_id="wx_view_73b58de5">
+    <view class="listitem01" data-c_e_id="wx_viewd43566f3">
+      <block wx:for='{{activity_list}}' wx:key='{{activity_id}}' >
+        <navigator class="listitem-navigator" data-c_e_id="wx_navigatorb90d9a0d" hover-class="navigator-hover" url="../activity/activity">
+            <image class="wx-image_tBcdCT2" data-c_e_id="wx_image692947c7" mode="aspectFill"  style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url('https://6b6e-knowflower-ac6ddd-1257744505.tcb.qcloud.la/logo.png')"/>
+            <view class="wx-view_cPj0ok2" data-c_e_id="wx_viewe56ca6aa">
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text6e310aa3">{{item.title}}</text>
+                <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text6c6899a3">{{item.time}} {{item.location}}</text>
+            </view>
+        </navigator>
+      </block>
+      <!--
+        <navigator class="listitem-navigator" data-c_e_id="wx_navigator4fac525f" hover-class="navigator-hover" url="../activity/activity">
+            <image class="wx-image_tBcdCT2" data-c_e_id="wx_image1d2e067d" mode="aspectFill" src="https://6b6e-knowflower-ac6ddd-1257744505.tcb.qcloud.la/logo.png" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(https://6b6e-knowflower-ac6ddd-1257744505.tcb.qcloud.la/logo.png); "/>
+            <view class="wx-view_cPj0ok2" data-c_e_id="wx_viewe417c266">
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_texte89d7efc">title <br/>
+                </text>
+                <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_textd13ed938">discription...</text>
+            </view>
+        </navigator>
+        <navigator catchtap="tap_9186d06d" class="listitem-navigator" data-c_act_id="M_2e384f23e1b3e502" data-c_e_id="wx_navigator903f5310" hover-class="navigator-hover" url="../activity/activity">
+            <image class="wx-image_tBcdCT2" data-c_e_id="wx_imagef6be50ca" mode="aspectFill" src="https://6b6e-knowflower-ac6ddd-1257744505.tcb.qcloud.la/logo.png" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(https://6b6e-knowflower-ac6ddd-1257744505.tcb.qcloud.la/logo.png); "/>
+            <view class="wx-view_cPj0ok2" data-c_e_id="wx_viewf976f03e">
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text69cd5bf6">title</text>
+                <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text06b4eeec">discription...</text>
+            </view>
+        </navigator>
+        <view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_view_d1db1ce4">
+            <navigator class="listitem-navigator" data-c_e_id="wx_navigator243185ad" hover-class="navigator-hover" url="../activity/activity">
+                <image class="wx-image_tBcdCT2" data-c_e_id="wx_image63a203ae" mode="aspectFill" src="https://6b6e-knowflower-ac6ddd-1257744505.tcb.qcloud.la/logo.png" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(https://6b6e-knowflower-ac6ddd-1257744505.tcb.qcloud.la/logo.png); "/>
+                <view class="wx-view_cPj0ok2" data-c_e_id="wx_viewd11f9c36">
+                    <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text588a88c1">title</text>
+                    <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text92f84285">discription</text>
+                </view>
+            </navigator>
+        </view>
+        <view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewade02125">
+            <navigator class="listitem-navigator" data-c_e_id="wx_navigator198e0fe6" hover-class="navigator-hover" url="../activity/activity">
+                <image class="wx-image_tBcdCT2" data-c_e_id="wx_imagebe1e68b6" mode="aspectFill" src="https://6b6e-knowflower-ac6ddd-1257744505.tcb.qcloud.la/logo.png" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(https://6b6e-knowflower-ac6ddd-1257744505.tcb.qcloud.la/logo.png); "/>
+                <view class="wx-view_cPj0ok2" data-c_e_id="wx_view916d4e22">
+                    <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text48cdb073">title</text>
+                    <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text56286b97">discription...</text>
+                </view>
+            </navigator>
+        </view>
+        -->
+    </view>
+</view>

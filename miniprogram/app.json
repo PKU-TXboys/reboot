@@ -29,12 +29,6 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/activity/activity",
-        "text": "test",
-        "iconPath": "images/search.png",
-        "selectedIconPath": "images/search_selected.png"
-      },
-      {
         "pagePath": "pages/forum/forum",
         "text": "forum",
         "iconPath": "images/search.png",

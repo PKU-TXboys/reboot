@@ -17,11 +17,16 @@
       </view>
       <view>
         <view class='td'>类型</view>
-        <picker range='["硬件", "软件", "清灰"]'>
+        <picker bindchange='bindPickerDateChange' value='{{picker_index}}' range='{{type}}'>
           <view class="picker">
-            当前选择：
+            {{type[picker_index]}}
           </view>
         </picker>
+      </view>
+      <view>
+        <view class='td'>预约时间</view>
+        <!-- 我觉得用picker控制输入更好一些 -->
+        <input type='text' name="time" placeholder="如1:30" /> 
       </view>
       <view>
         <view class='td'>联系方式</view>
@@ -35,9 +40,9 @@
         <view class='td'>问题描述</view>
         <textarea name="description" placeholder="问题描述" />
       </view>
-      <view style='display:flex; margin:10px'>
-        <button form-type="submit">Submit</button>
-        <button form-type="reset">Reset</button>
+      <view style='display:flex; margin-top:10px; margin-bottom:10px'>
+        <button form-type="submit" style='margin-right:5px'>提交</button>
+        <button form-type="reset" style='margin-left:5px'>重置</button>
       </view>
     </form>
   </view>
