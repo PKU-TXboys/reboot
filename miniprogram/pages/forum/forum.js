@@ -16,7 +16,10 @@ Page({
    */
 
   data: {
-  
+    message:"bar for new topic",
+    search: "search",
+    newtopic: "new"
+
 
   
 
