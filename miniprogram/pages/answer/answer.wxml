@@ -1,0 +1,9 @@
+<view class="outer">
+  <view class="description">
+  <input type='text' confirm-type='done' placeholder='请在此处输入您的回答'/>
+  </view>
+</view>
+<view class="bottom">
+    <view class="picture"><image src='../../images/camera.png' mode='aspectFit' style='width:50%;height:100%;margin-left:25%'/></view>
+    <view class="post"><image src='../../images/post4.png' mode='aspectFit' style='width:50%;height:100%;margin-left:30%'/></view>
+  </view>
