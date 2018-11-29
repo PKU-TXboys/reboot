@@ -10,26 +10,23 @@ Page({
   /**
    * 页面名称
    */
-  name: "forum",
+  name: "topic",
   /**
    * 页面的初始数据
    */
 
   data: {
-    message:"bar for new topic",
-    search: "search",
-    newtopic: "new"
 
 
-  
 
-  
+
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad () {
+  onLoad() {
     // 注册coolsite360交互模块
     app.coolsite360.register(this);
   },
@@ -37,14 +34,14 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady () {
+  onReady() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow () {
+  onShow() {
     // 执行coolsite360交互组件展示
     app.coolsite360.onShow(this);
   },
@@ -52,26 +49,26 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide () {
+  onHide() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload () {
+  onUnload() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh () {
-    
+  onPullDownRefresh() {
+
   },
 
 
   //以下为自定义点击事件
-  
+
 })
 

@@ -1,14 +1,8 @@
 .outer{
   height:93%;
 }
-.title{
-  height:25%;
-  background-color: gainsboro;
-  border-radius: 20rpx;
-  margin:5%
-}
 .description{
-  height:75%;
+  height:100%;
   background-color: gainsboro;
   border-radius: 20rpx;
   margin:5%

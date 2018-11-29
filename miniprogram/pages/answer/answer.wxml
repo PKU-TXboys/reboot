@@ -1,10 +1,6 @@
-<!--pages/newtopic/newtopic.wxml-->
 <view class="outer">
-  <view class="title">
-    <input type='text' confirm-type='done' placeholder='请在此处输入问题'/>
-  </view>
   <view class="description">
-  <input type='text' confirm-type='done' placeholder='请在此处输入问题描述'/>
+  <input type='text' confirm-type='done' placeholder='请在此处输入您的回答'/>
   </view>
 </view>
 <view class="bottom">
