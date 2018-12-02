@@ -17,7 +17,7 @@ App({
 
   globalData:{
     openid:'',
-    atavar:''
+    avatar:''
   }
 })
 
