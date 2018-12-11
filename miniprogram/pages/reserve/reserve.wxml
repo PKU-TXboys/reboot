@@ -17,7 +17,7 @@
       </view>
       <view>
         <view class='td'>类型</view>
-        <picker bindchange='bindPickerDateChange' value='{{picker_index}}' range='{{type}}'>
+        <picker bindchange='bindPickerDateChange' name='type' value='{{picker_index}}' range='{{type}}'>
           <view class="picker">
             {{type[picker_index]}}
           </view>
@@ -30,11 +30,11 @@
       </view>
       <view>
         <view class='td'>联系方式</view>
-        <input type='text' name="grade" placeholder="手机号或微信号" />
+        <input type='text' name="contact" placeholder="手机号或微信号" />
       </view>
       <view>
         <view class='td'>电脑型号</view>
-        <input type='text' name="type" placeholder="如Thinkpad 430" />
+        <input type='text' name="computer" placeholder="如Thinkpad 430" />
       </view>
       <view>
         <view class='td'>问题描述</view>

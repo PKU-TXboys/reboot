@@ -48,7 +48,7 @@
 </view>
 
 <view class="bottom-fixed">
-  <navigator class='listitem-navigator' hover-class="navigator-hover" url='../reserve/reserve'>
+  <navigator class='listitem-navigator' hover-class="navigator-hover" url='../reserve/reserve?id={{activity_data._id}}'>
     <view style='width:100%'>
       <text>活动预约</text>
     </view>

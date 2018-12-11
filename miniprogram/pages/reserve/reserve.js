@@ -1,10 +1,13 @@
 // pages/reserve/reserve.js
+const db = wx.cloud.database()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    id:'',
     type: ["软件", "硬件", "清灰"],
     picker_index: 0,
 
@@ -14,7 +17,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    this.setData({
+      id: options.id
+    })
   },
 
   /**
@@ -66,8 +72,43 @@ Page({
 
   },
 
-  formSubmit: function(){
+  formSubmit: function(e){
+    console.log(e.detail.value)
+    var that = this
+    var computer = e.detail.value.computer
+    var description = e.detail.value.description
+    var name = e.detail.value.name
+    var contact = e.detail.value.contact
+    var time = e.detail.value.time
+    var type = that.data.type[e.detail.value.type]
     var that = this;
+    const _ = db.command
+    db.collection('activity_list').doc(that.data.id).update({
+      data:{
+        appointment: _.push({
+          computer: computer,
+          description: description,
+          name: name,
+          contact: contact,
+          time: time,
+          type: type
+        })
+      },
+      success: function(res){
+        console.log(res)
+        setTimeout(function(){
+          wx.navigateBack({
+            delta: 1
+          })
+        }, 1000)
+        wx.showToast({
+          title: '预约成功',
+          icon: 'success',
+          duration: 1000,
+          mask: true,
+        })
+      }
+    })
   },
 
   formReset: function(){

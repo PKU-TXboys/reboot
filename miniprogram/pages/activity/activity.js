@@ -8,7 +8,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    activity_data: {}
+    activity_data: {},
+    hide: true,
+    id:''
   },
 
   /**
@@ -17,16 +19,19 @@ Page({
   onLoad: function (options) {
     var that = this;
     console.log(options)
-    db.collection('activity_list').where({
-      _id: options.id
-    }).get({
-      success: function(res){
-        console.log(res.data)
-        that.setData({
-          activity_data:res.data[0]
-        })
-      }
+    this.setData({
+      id:options.id
     })
+    // db.collection('activity_list').where({
+    //   _id: options.id
+    // }).get({
+    //   success: function(res){
+    //     console.log(res.data)
+    //     that.setData({
+    //       activity_data:res.data[0]
+    //     })
+    //   }
+    // })
   },
 
   /**
@@ -40,7 +45,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    db.collection('activity_list').where({
+      _id: that.data.id
+    }).get({
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          activity_data: res.data[0]
+        })
+      }
+    })
   },
 
   /**
