@@ -126,87 +126,29 @@ Page({
     const db = wx.cloud.database()
     db.collection('activity_list').add({
       data: {
-        activity_list: [
+        "activity_id": 1,
+        "title": "电脑小队第二次活动",
+        "time": "2018年11月24日",
+        "description": "只修电脑，绝不过夜。",
+        "location": "理教107",
+        "appointment": [
           {
-            "activity_id": 1,
-            "title": "电脑小队第二次活动",
-            "time": "2018年11月24日",
-            "description": "只修电脑，绝不过夜。",
-            "location": "理教107",
-            "appointment": [
-              {
-                "id": 1,
-                "name": "str",
-                "time": "1:30",
-                "type": "软件",
-                "description": "睡过头玩儿去台湾而出去玩而长期无法让千万人味儿的全额外人的万人气味儿",
-                "computer": "str",
-                "phone_number": "str"
-              },
-              {
-                "id": 2,
-                "name": "str",
-                "time": "2:30",
-                "type": "清灰",
-                "description": "str",
-                "computer": "str",
-                "phone_number": "str"
-              }
-            ]
+            "id": 1,
+            "name": "str",
+            "time": "1:30",
+            "type": "软件",
+            "description": "睡过头玩儿去台湾而出去玩而长期无法让千万人味儿的全额外人的万人气味儿",
+            "computer": "str",
+            "phone_number": "str"
           },
           {
-            "activity_id": 2,
-            "title": "电脑小队第二次活动",
-            "time": "2018年11月24日",
-            "description": "只修电脑，绝不过夜。",
-            "location": "理教107",
-            "appointment": [
-              {
-                "id": 1,
-                "name": "str",
-                "time": "1:30",
-                "type": "软件",
-                "description": "睡过头玩儿去台湾而出去玩而长期无法让千万人味儿的全额外人的万人气味儿",
-                "computer": "str",
-                "phone_number": "str"
-              },
-              {
-                "id": 2,
-                "name": "str",
-                "time": "2:30",
-                "type": "清灰",
-                "description": "str",
-                "computer": "str",
-                "phone_number": "str"
-              }
-            ]
-          },
-          {
-            "activity_id": 3,
-            "title": "电脑小队第二次活动",
-            "time": "2018年11月24日",
-            "description": "只修电脑，绝不过夜。",
-            "location": "理教107",
-            "appointment": [
-              {
-                "id": 1,
-                "name": "str",
-                "time": "1:30",
-                "type": "软件",
-                "description": "睡过头玩儿去台湾而出去玩而长期无法让千万人味儿的全额外人的万人气味儿",
-                "computer": "str",
-                "phone_number": "str"
-              },
-              {
-                "id": 2,
-                "name": "str",
-                "time": "2:30",
-                "type": "清灰",
-                "description": "str",
-                "computer": "str",
-                "phone_number": "str"
-              }
-            ]
+            "id": 2,
+            "name": "str",
+            "time": "2:30",
+            "type": "清灰",
+            "description": "str",
+            "computer": "str",
+            "phone_number": "str"
           }
         ]
       },
