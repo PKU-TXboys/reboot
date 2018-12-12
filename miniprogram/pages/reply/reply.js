@@ -16,7 +16,10 @@ Page({
    */
 
   data: {
-
+    title:"",
+    avatarURL: "",
+    nickname: "",
+    content:""
 
 
 
@@ -26,9 +29,17 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad() {
+  onLoad(option) {
     // 注册coolsite360交互模块
     app.coolsite360.register(this);
+    var that = this;
+    console.log(option)
+    this.setData({
+      title: option.title,
+      avatarURL: option.avatarURL,
+      nickname: option.nickname,
+      content: option.content
+    })
   },
 
   /**

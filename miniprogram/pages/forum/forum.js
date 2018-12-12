@@ -4,6 +4,8 @@ require('coolsite.config.js');
 
 // 获取全局应用程序实例对象
 var app = getApp();
+const db = wx.cloud.database();
+
 
 // 创建页面实例对象
 Page({
@@ -11,6 +13,7 @@ Page({
    * 页面名称
    */
   name: "forum",
+
   /**
    * 页面的初始数据
    */
@@ -18,7 +21,9 @@ Page({
   data: {
     message:"bar for new topic",
     search: "search",
-    newtopic: "new"
+    newtopic: "new",
+    topic_list: []
+
 
 
   
@@ -47,6 +52,19 @@ Page({
   onShow () {
     // 执行coolsite360交互组件展示
     app.coolsite360.onShow(this);
+    var that = this;
+    db.collection('topic_list').get({
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          topic_list: res.data
+        });
+      },
+      fail: function () {
+        console.log("fail to get topic_list")
+     
+      }
+    })
   },
 
   /**

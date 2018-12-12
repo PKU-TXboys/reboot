@@ -4,6 +4,7 @@ require('coolsite.config.js');
 
 // 获取全局应用程序实例对象
 var app = getApp();
+const db = wx.cloud.database()
 
 // 创建页面实例对象
 Page({
@@ -16,22 +17,22 @@ Page({
    */
 
   data: {
-    title:"question title",
-    reply_nums: 1,
-    replylist:[]
-
-
-  
-
-  
+    topic_data: {},
+    hide: true,
+    id: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad () {
+  onLoad (option) {
     // 注册coolsite360交互模块
     app.coolsite360.register(this);
+    var that = this;
+    console.log(option)
+    this.setData({
+      id: option.id
+    })
   },
 
   /**
@@ -47,6 +48,17 @@ Page({
   onShow () {
     // 执行coolsite360交互组件展示
     app.coolsite360.onShow(this);
+    var that = this
+    db.collection('topic_list').where({
+      _id : that.data.id
+    }).get({
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          topic_data: res.data[0]
+        })
+      }
+    })
   },
 
   /**
