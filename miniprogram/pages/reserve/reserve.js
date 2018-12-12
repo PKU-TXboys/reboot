@@ -33,8 +33,8 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
+  onShow: function (options) {
+    console.log(this.data.id)
   },
 
   /**
@@ -96,6 +96,15 @@ Page({
       },
       success: function(res){
         console.log(res)
+        wx.cloud.callFunction({
+          name: 'addActivity',
+          data:{
+            activity_id: that.data.id
+          },
+          success: function(){
+            console.log('call function success');
+          }
+        })
         setTimeout(function(){
           wx.navigateBack({
             delta: 1
