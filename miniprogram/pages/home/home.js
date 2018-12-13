@@ -4,6 +4,7 @@ require('coolsite.config.js');
 
 // 获取全局应用程序实例对象
 var app = getApp();
+const db = wx.cloud.database();
 
 // 创建页面实例对象
 Page({
@@ -27,34 +28,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad () {
-    // 注册coolsite360交互模块
-    app.coolsite360.register(this);
-    var that = this;
-    wx.getSetting({
-      success: res => {
-        console.log(res.authSetting)
-        if (res.authSetting['scope.userInfo']){
-          wx.getUserInfo({
-            success: function (res) {
-              var userInfo = res.userInfo
-              var nickName = userInfo.nickName
-              var avatarUrl = userInfo.avatarUrl
-              var gender = userInfo.gender //性别 0：未知、1：男、2：女
-              var province = userInfo.province
-              var city = userInfo.city
-              var country = userInfo.country
-              that.setData({
-                nickname: nickName,
-                gender: gender,
-                avatar: avatarUrl,
-                hidden: true
-              })
-            }
-          })
-        }
-      }
-    })
-    
+
   },
 
   /**
@@ -123,8 +97,7 @@ Page({
 
   //以下为自定义点击事件
   add: function(){
-    const db = wx.cloud.database()
-    db.collection('topic_list').add({
+    db.collection('activity_list').add({
       data: {
         "topic_id": 0,
         "title": "表白信科15级jz学长",
@@ -147,6 +120,37 @@ Page({
         console.log(res)
       }
     })
+  },
+
+  button_tap: function (res) {
+    var that = this;
+    var userInfo = res.detail.userInfo
+    console.log(userInfo)
+    var nickName = userInfo.nickName
+    var avatarUrl = userInfo.avatarUrl
+    var gender = userInfo.gender //性别 0：未知、1：男、2：女
+    var province = userInfo.province
+    var city = userInfo.city
+    var country = userInfo.country
+
+    wx.cloud.callFunction({
+      name: 'addUser',
+      data:res.detail.userInfo,
+      success: function(res){
+        console.log(res.success)
+      },
+      fail: function(res){
+        console.error('[云函数] [sum] 调用失败：', res.errMsg)
+      }
+    })
+
+    that.setData({
+      nickname: nickName,
+      gender: gender,
+      avatar: avatarUrl,
+      hidden: true
+    });
+    app.globalData.avatar = avatarUrl;
   }
 })
 
