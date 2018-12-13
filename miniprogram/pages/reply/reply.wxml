@@ -2,20 +2,20 @@
 <view class="outer">
   <view class="title">
     <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textc242c6b3" style='font-weight:700'>
-      Title
+      {{title}}
     </text>
   </view>
   <view class="reply">
     <view class="wx-navigator_rv4BGW" data-c_e_id="wx_navigator757cc40e" hover-class="navigator-hover" >
-      <image class="wx-image_tBcdCT"data-c_e_id="wx_imagee3d66bee"mode="aspectFill"src="http://qty83k.creatby.com/materials/origin/e08b7f406c49e68a972a05518afe2e9a_origin.jpg" style="background-size:cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/e08b7f406c49e68a972a05518afe2e9a_origin.jpg); "/>
+      <image class="wx-image_tBcdCT"data-c_e_id="wx_imagee3d66bee"mode="aspectFill"src="{{avatarURL}}" style="background-size:cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/e08b7f406c49e68a972a05518afe2e9a_origin.jpg); "/>
         <view class="wx-view_cPj0ok" data-c_e_id="wx_viewcaa9921a">
-          <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textae505707">Angela</text>
+          <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textae505707">{{nickname}}</text>
           <text class="c-block wx-text_LS2Jup" data-c_e_id="wx_text64337bee">November 5, 1955</text>
         </view>
     </view>
     <view class="content">
       <text style="font-weight;font-size:medium;">
-        问题的回答
+        {{content}}
       </text>
     </view>
   </view>

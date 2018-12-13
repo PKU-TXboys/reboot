@@ -13,67 +13,35 @@
   </view>
 
   <view style='margin-top:10%'>
-    <view class="wx-view_JbWxfk" data-c_e_id="wx_view36a5f58d">
+    <view class="wx-view_JbWxfk" data-c_e_id="wx_view36a5f58d" wx:for = "{{topic_list}}">
         <view class="carditem01" data-c_e_id="wx_view2f47d002">
             <view class="wx-view_QvvUkU" data-c_e_id="wx_view9a26c020">
-                <navigator class="wx-navigator_rv4BGW" data-c_e_id="wx_navigator3a0627f6" hover-class="navigator-hover" url="../topic/topic">
-                    <image class="wx-image_tBcdCT" data-c_e_id="wx_image9a4b5d06" mode="aspectFill" src="http://qty83k.creatby.com/materials/origin/e08b7f406c49e68a972a05518afe2e9a_origin.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/e08b7f406c49e68a972a05518afe2e9a_origin.jpg); "/>
+                <navigator class="wx-navigator_rv4BGW" data-c_e_id="wx_navigator3a0627f6" hover-class="navigator-hover" url="../topic/topic?id={{item._id}}">
+                    <image class="wx-image_tBcdCT" data-c_e_id="wx_image9a4b5d06" mode="aspectFill" src="{{item['owner']['avatarURL']}}" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/e08b7f406c49e68a972a05518afe2e9a_origin.jpg); "/>
                     <view class="wx-view_cPj0ok" data-c_e_id="wx_viewe7d22733">
-                        <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textc242c6b3">Angela</text>
-                        <text class="c-block wx-text_LS2Jup" data-c_e_id="wx_text1b1fa35d">November 5, 1955</text>
+                        <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textc242c6b3">{{item['owner']['nickname']}}</text>
+                        <text class="c-block wx-text_LS2Jup" data-c_e_id="wx_text1b1fa35d"></text>
                     </view>
                 </navigator>
             </view>
-            <navigator class="wx-navigator_PNd8QQ" data-c_e_id="wx_navigator860bf338" hover-class="navigator-hover" url="../topic/topic">
+            <navigator class="wx-navigator_PNd8QQ" data-c_e_id="wx_navigator860bf338" hover-class="navigator-hover" url="../topic/topic?id={{item._id}}">
                 <image class="wx-image_BEjy38" data-c_e_id="wx_image30d63d6d" mode="aspectFill" src="http://qty83k.creatby.com/materials/origin/cc09a72b7456da9c074c33dfffc1f94b_origin_2.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/cc09a72b7456da9c074c33dfffc1f94b_origin_2.jpg); "/>
                 <view class="wx-view_KedDbI" data-c_e_id="wx_view1bcd6050">
-                    <text class="c-block wx-text_6zTs4l" data-c_e_id="wx_textcdf69eb9">descriptiion...</text>
+                    <text class="c-block wx-text_6zTs4l" data-c_e_id="wx_textcdf69eb9">{{item['description']}}</text>
                 </view>
             </navigator>
             <view class="wx-view_adF7Mw" data-c_e_id="wx_viewaae1fe30">
                 <view class="wx-view_2gazUr" data-c_e_id="wx_view1624e513">
                     <view class="wx-view_DKe6UT" data-c_e_id="wx_view4d891ef3">
                         <image class="wx-image_6E2A1o" data-c_e_id="wx_image5c6e2207" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png); "/>
-                        <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text503770aa">235</text>
+                        <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text503770aa">{{item['like'] > 99 ? "99+" : item['like']}}</text>
                     </view>
                     <view class="wx-view_DKe6UT" data-c_e_id="wx_viewa8901d45">
                         <image class="wx-image_6E2A1o" data-c_e_id="wx_imageed28831e" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png); "/>
-                        <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text11a516a4">143</text>
+                        <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text11a516a4">{{item['comment'].length > 99 ? "99+" : item['comment'].length}}</text>
                     </view>
                 </view>
                 <text class="c-block wx-text_9Wn0Di" data-c_e_id="wx_text3f27bb93">1小时前</text>
-            </view>
-        </view>
-    </view>
-    <view class="wx-view_JbWxfk" data-c_e_id="wx_view17ac1397">
-        <view class="carditem01" data-c_e_id="wx_view1c3d5d10">
-            <view class="wx-view_QvvUkU" data-c_e_id="wx_view328fe02b">
-                <navigator class="wx-navigator_rv4BGW" data-c_e_id="wx_navigator757cc40e" hover-class="navigator-hover" url="../topic/topic">
-                    <image class="wx-image_tBcdCT" data-c_e_id="wx_imagee3d66bee" mode="aspectFill" src="http://qty83k.creatby.com/materials/origin/e08b7f406c49e68a972a05518afe2e9a_origin.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/e08b7f406c49e68a972a05518afe2e9a_origin.jpg); "/>
-                    <view class="wx-view_cPj0ok" data-c_e_id="wx_viewcaa9921a">
-                        <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textae505707">Angela</text>
-                        <text class="c-block wx-text_LS2Jup" data-c_e_id="wx_text64337bee">November 5, 1955</text>
-                    </view>
-                </navigator>
-            </view>
-            <navigator class="wx-navigator_PNd8QQ" data-c_e_id="wx_navigator1788e826" hover-class="navigator-hover" url="../topic/topic">
-                <image class="wx-image_BEjy38" data-c_e_id="wx_imagec7e62c62" mode="aspectFill" src="http://qty83k.creatby.com/materials/origin/cc09a72b7456da9c074c33dfffc1f94b_origin_2.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/cc09a72b7456da9c074c33dfffc1f94b_origin_2.jpg); "/>
-                <view class="wx-view_KedDbI" data-c_e_id="wx_view30521599">
-                    <text class="c-block wx-text_6zTs4l" data-c_e_id="wx_textc5d5fc8f">descriptiion...</text>
-                </view>
-            </navigator>
-            <view class="wx-view_adF7Mw" data-c_e_id="wx_viewd8fdb17b">
-                <view class="wx-view_2gazUr" data-c_e_id="wx_viewde70d344">
-                    <view class="wx-view_DKe6UT" data-c_e_id="wx_view6365aa95">
-                        <image class="wx-image_6E2A1o" data-c_e_id="wx_image255120d6" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png); "/>
-                        <text class="c-block wx-text_id0VJj" data-c_e_id="wx_textb6680a66">235</text>
-                    </view>
-                    <view class="wx-view_DKe6UT" data-c_e_id="wx_view8b88e5f4">
-                        <image class="wx-image_6E2A1o" data-c_e_id="wx_image08d4c6e8" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png); "/>
-                        <text class="c-block wx-text_id0VJj" data-c_e_id="wx_textb7c3ce8b">143</text>
-                    </view>
-                </view>
-                <text class="c-block wx-text_9Wn0Di" data-c_e_id="wx_textc0b2f8b3">1小时前</text>
             </view>
         </view>
     </view>

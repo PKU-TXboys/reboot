@@ -47,7 +47,7 @@ Page({
     var that = this;
     wx.getSetting({
       success: res => {
-        console.log(res.authSetting)
+        console.log(res)
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: function (res) {
@@ -99,31 +99,21 @@ Page({
   add: function(){
     db.collection('activity_list').add({
       data: {
-        "activity_id": 1,
-        "title": "电脑小队第二次活动",
-        "time": "2018年11月24日",
-        "description": "只修电脑，绝不过夜。",
-        "location": "理教107",
-        "appointment": [
-          {
-            "id": 1,
-            "name": "str",
-            "time": "1:30",
-            "type": "软件",
-            "description": "睡过头玩儿去台湾而出去玩而长期无法让千万人味儿的全额外人的万人气味儿",
-            "computer": "str",
-            "phone_number": "str"
-          },
-          {
-            "id": 2,
-            "name": "str",
-            "time": "2:30",
-            "type": "清灰",
-            "description": "str",
-            "computer": "str",
-            "phone_number": "str"
-          }
-        ]
+        "topic_id": 0,
+        "title": "表白信科15级jz学长",
+        "description": "jz学长可真的是太帅了，请问他单身么",
+        "owner": {
+          "nickname": "βurning",
+          "avatarURL": "https://wx.qlogo.cn/mmopen/vi_32/tlnRaKic6pftKwyCkomaTBgKCUwkR4nuQGvMAVRaMG1FofZ8BREMiaibKPBAFZ0n6KmC9XAltJqyneRnGXYndBwiag/132"
+        },
+        "image": ["http://qty83k.creatby.com/materials/origin/e08b7f406c49e68a972a05518afe2e9a_origin.jpg"],
+        "comment": [{
+          "nickname": "βurning",
+          "avatarURL": "https://wx.qlogo.cn/mmopen/vi_32/tlnRaKic6pftKwyCkomaTBgKCUwkR4nuQGvMAVRaMG1FofZ8BREMiaibKPBAFZ0n6KmC9XAltJqyneRnGXYndBwiag/132",
+          "content": "我jio得你说的对"
+        }
+        ],
+        "like": 250
       },
       success: function (res) {
         // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id

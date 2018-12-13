@@ -48,6 +48,9 @@ Page({
         that.setData({
           activity_list: res.data
         }); 
+      },
+      fail:function(res){
+        console.log("fail to get act_list")
       }
     })
   },
