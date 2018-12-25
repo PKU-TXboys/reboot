@@ -23,12 +23,6 @@ Page({
     search: "search",
     newtopic: "new",
     topic_list: []
-
-
-
-  
-
-  
   },
 
   /**

@@ -1,4 +1,3 @@
-/* pages/mytopic/mytopic.wxss */
 .outer{
   display:flex;
   flex-direction: column;

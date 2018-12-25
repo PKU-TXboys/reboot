@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    message: "bar for new topic",
+    search: "search",
+    newtopic: "new",
+    topic_list: []
   },
 
   /**
@@ -26,7 +29,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    wx.cloud.callFunction({
+      name: 'getMyTopic',
+      data: {},
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          topic_list: res.result.topic_list
+        })
+      },
+      fail: function (res) {
+        console.log(res)
+        console.log('failed');
+      }
+    })
   },
 
   /**
