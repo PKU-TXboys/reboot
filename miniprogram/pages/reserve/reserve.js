@@ -73,8 +73,8 @@ Page({
   },
 
   formSubmit: function(e){
-    console.log(e.detail.value)
     var that = this
+    console.log(e.detail.value, that.data.id)
     var computer = e.detail.value.computer
     var description = e.detail.value.description
     var name = e.detail.value.name
@@ -83,28 +83,22 @@ Page({
     var type = that.data.type[e.detail.value.type]
     var that = this;
     const _ = db.command
-    db.collection('activity_list').doc(that.data.id).update({
+    wx.showLoading({
+      title: '提交中',
+    })
+    wx.cloud.callFunction({
+      name: 'reserve',
       data:{
-        appointment: _.push({
-          computer: computer,
-          description: description,
-          name: name,
-          contact: contact,
-          time: time,
-          type: type
-        })
+        id: that.data.id,
+        computer: computer,
+        description: description,
+        name: name,
+        contact: contact,
+        time: time,
+        type: type
       },
       success: function(res){
         console.log(res)
-        wx.cloud.callFunction({
-          name: 'addActivity',
-          data:{
-            activity_id: that.data.id
-          },
-          success: function(){
-            console.log('call function success');
-          }
-        })
         setTimeout(function(){
           wx.navigateBack({
             delta: 1
@@ -116,6 +110,9 @@ Page({
           duration: 1000,
           mask: true,
         })
+      },
+      fail: function (res) {
+        console.error('[云函数] [reserve] 调用失败：', res.errMsg)
       }
     })
   },

@@ -6,7 +6,7 @@
                 <navigator class="wx-navigator_rv4BGW" data-c_e_id="wx_navigator3a0627f6" hover-class="navigator-hover" url="../topic/topic?id={{item._id}}">
                     <image class="wx-image_tBcdCT" data-c_e_id="wx_image9a4b5d06" mode="aspectFill" src="{{item['owner']['avatarURL']}}" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/e08b7f406c49e68a972a05518afe2e9a_origin.jpg); "/>
                     <view class="wx-view_cPj0ok" data-c_e_id="wx_viewe7d22733">
-                        <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textc242c6b3">{{item['owner']['nickname']}}</text>
+                        <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textc242c6b3">{{item.title}}</text>
                         <text class="c-block wx-text_LS2Jup" data-c_e_id="wx_text1b1fa35d"></text>
                     </view>
                 </navigator>

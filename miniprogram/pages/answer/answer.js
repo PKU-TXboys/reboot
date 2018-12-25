@@ -95,14 +95,20 @@ Page({
     console.log(e)
     var that = this
     const _ = db.command
-    console.log(that.data.id)
-    db.collection('topic_list').doc(that.data.id).update({
+    var nickname = that.data.nickname
+    var avatarURL = that.data.avatarURL
+    var comment = that.data.comment
+    console.log(that.data.id, nickname, avatarURL, comment)
+    wx.showLoading({
+      title: '提交中',
+    })
+    wx.cloud.callFunction({
+      name: 'answer',
       data: {
-        comment: _.push(
-          { 'nickname': that.data.nickname, 
-          'avatarURL': that.data.avatarURL, 
-          'content': that.data.comment 
-          })
+        id: that.data.id,
+        nickname: nickname,
+        avatarURL: avatarURL,
+        content: comment
       },
       success: function (res) {
         console.log(res)
@@ -117,13 +123,11 @@ Page({
           duration: 1000,
           mask: true,
         })
+      },
+      fail: function (res) {
+        console.error('[云函数] [answer] 调用失败：', res.errMsg)
       }
-
-    }
-    
-    
-    )
-    
+    })
   },
 
   input_comment: function (res) {

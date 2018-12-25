@@ -1,13 +1,13 @@
 <!--pages/newtopic/newtopic.wxml-->
 <view class="outer">
   <view class="title">
-    <input type='text' confirm-type='done' bindinput='input_title' placeholder='请在此处输入问题'/>
+    <textarea type='text' confirm-type='done' bindinput='input_title' placeholder='请在此处输入问题'/>
   </view>
   <view class="description">
-  <input type='text' confirm-type='done' bindinput='input_description' placeholder='请在此处输入问题描述'/>
+  <textarea type='text' confirm-type='done' bindinput='input_description' placeholder='请在此处输入问题描述'/>
   </view>
 </view>
 <view class="bottom">
     <botton class="picture"><image src='../../images/camera.png' mode='aspectFit' style='width:50%;height:100%;margin-left:25%'/></botton>
     <botton class="post" bindtap='submit'><image src='../../images/post4.png' mode='aspectFit' style='width:50%;height:100%;margin-left:30%'/></botton>
-  </view>
+</view>

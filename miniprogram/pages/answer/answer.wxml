@@ -1,6 +1,6 @@
 <view class="outer">
   <view class="description">
-  <input type='text' bindinput='input_comment' confirm-type='done' placeholder='请在此处输入您的回答'/>
+  <textarea type='text' bindinput='input_comment' confirm-type='done' style='height:100%' placeholder='请在此处输入您的回答'/>
   </view>
 </view>
 <view class="bottom">

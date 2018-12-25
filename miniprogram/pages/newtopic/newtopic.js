@@ -15,7 +15,6 @@ Page({
     image:[],
     comment:[],
     like:0
-
   },
 
   /**
@@ -94,6 +93,9 @@ Page({
   submit: function (e) {
     console.log(e)
     var that = this
+    wx.showLoading({
+      title: '提交中',
+    })
     db.collection('topic_list').add({
       data:{
         "topic_id": 0,
@@ -114,6 +116,7 @@ Page({
             delta: 1
           })
         }, 1000)
+        wx.hideLoading()
         wx.showToast({
           title: '提交成功',
           icon: 'success',
