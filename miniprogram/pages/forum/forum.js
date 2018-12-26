@@ -51,7 +51,7 @@ Page({
       success: function (res) {
         console.log(res);
         that.setData({
-          topic_list: res.data
+          topic_list: res.data.reverse()
         });
       },
       fail: function () {
