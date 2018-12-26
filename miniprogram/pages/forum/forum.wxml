@@ -25,7 +25,7 @@
                 </navigator>
             </view>
             <navigator class="wx-navigator_PNd8QQ" data-c_e_id="wx_navigator860bf338" hover-class="navigator-hover" url="../topic/topic?id={{item._id}}">
-                <image wx:if="{{item['image'].length != 0}}"  class="wx-image_BEjy38" data-c_e_id="wx_image30d63d6d" mode="aspectFill" src="http://qty83k.creatby.com/materials/origin/cc09a72b7456da9c074c33dfffc1f94b_origin_2.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/cc09a72b7456da9c074c33dfffc1f94b_origin_2.jpg); "/>
+                <image wx:if="{{item['image'].length != 0}}"  class="wx-image_BEjy38" data-c_e_id="wx_image30d63d6d" mode="aspectFill" src="{{item['image'][0]}}" style="background-size: cover; background-position: center center; background-repeat: no-repeat; "/>
                 <view class="wx-view_KedDbI" data-c_e_id="wx_view1bcd6050">
                     <text class="c-block wx-text_6zTs4l" data-c_e_id="wx_textcdf69eb9">{{item['description']}}</text>
                 </view>

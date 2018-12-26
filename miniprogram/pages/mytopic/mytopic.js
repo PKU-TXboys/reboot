@@ -36,7 +36,7 @@ Page({
       success: function (res) {
         console.log(res)
         that.setData({
-          topic_list: res.result.topic_list
+          topic_list: res.result.topic_list.reverse()
         })
       },
       fail: function (res) {
