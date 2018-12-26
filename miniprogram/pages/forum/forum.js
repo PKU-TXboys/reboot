@@ -47,11 +47,13 @@ Page({
     // 执行coolsite360交互组件展示
     app.coolsite360.onShow(this);
     var that = this;
-    db.collection('topic_list').get({
+    wx.cloud.callFunction({
+      name: 'getTopic',
+      data:{},
       success: function (res) {
         console.log(res);
         that.setData({
-          topic_list: res.data.reverse()
+          topic_list: res.result.data.reverse()
         });
       },
       fail: function () {

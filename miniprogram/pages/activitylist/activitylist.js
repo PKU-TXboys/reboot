@@ -42,15 +42,18 @@ Page({
     // 执行coolsite360交互组件展示
     app.coolsite360.onShow(this);
     var that = this;
-    db.collection('activity_list').get({
-      success: function(res){
-        console.log(res.data);
+    wx.cloud.callFunction({
+      name: 'getActivity',
+      data: {},
+      success: function (res) {
+        console.log(res);
         that.setData({
-          activity_list: res.data
-        }); 
+          activity_list: res.result.data.reverse()
+        });
       },
-      fail:function(res){
-        console.log("fail to get act_list")
+      fail: function () {
+        console.log("fail to get topic_list")
+
       }
     })
   },

@@ -19,7 +19,7 @@ exports.main = async (event, context) => {
     var cnt = await db.collection('topic_list').count();
     res = await db.collection('topic_list').add({
       data: {
-        "topic_id": cnt+1,
+        "topic_id": cnt.total+1,
         "_openid": openid,
         "title": title,
         "description": description,
