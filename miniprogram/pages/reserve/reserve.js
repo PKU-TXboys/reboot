@@ -81,6 +81,16 @@ Page({
     var contact = e.detail.value.contact
     var time = e.detail.value.time
     var type = that.data.type[e.detail.value.type]
+    if(computer=='' || description=='' || name=='' || contact=='' || time=='')
+    {
+      wx.showToast({
+        title: '请补全信息',
+        icon: 'none',
+        duration: 2000,
+        mask: true,
+      })
+      return;
+    }
     var that = this;
     const _ = db.command
     wx.showLoading({
