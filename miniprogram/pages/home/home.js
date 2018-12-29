@@ -141,7 +141,7 @@ Page({
         console.log(res.success)
       },
       fail: function(res){
-        console.error('[云函数] [sum] 调用失败：', res.errMsg)
+        console.error('[云函数] [adduser] 调用失败：', res.errMsg)
       }
     })
 
