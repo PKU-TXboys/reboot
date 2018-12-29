@@ -66,6 +66,7 @@ Page({
                 hidden: true
               });
               app.globalData.avatar = avatarUrl;
+              app.globalData.nickName = nickName;
             }
           })
         }
@@ -135,7 +136,7 @@ Page({
 
     wx.cloud.callFunction({
       name: 'addUser',
-      data:res.detail.userInfo,
+      data: res.detail.userInfo,
       success: function(res){
         console.log(res.success)
       },
@@ -151,6 +152,7 @@ Page({
       hidden: true
     });
     app.globalData.avatar = avatarUrl;
+    app.globalData.nickName = nickName;
   }
 })
 

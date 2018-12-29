@@ -47,6 +47,7 @@ App({
                 }
               });
               that.globalData.avatar = avatarUrl;
+              that.globalData.nickName = nickName;
             }
           })
         }
@@ -55,8 +56,9 @@ App({
   },
 
   globalData:{
-    openid:'',
-    avatar:''
+    nickName: '',
+    openid: '',
+    avatar: ''
   }
 })
 

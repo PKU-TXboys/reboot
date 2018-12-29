@@ -21,24 +21,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    wx.getSetting({
-      success: res => {
-        console.log(res)
-        if (res.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success: function (res) {
-              console.log(res)
-              var userInfo = res.userInfo
-              that.setData({
-                avatarURL : userInfo.avatarUrl,
-                nickname :  userInfo.nickName,
-              })
-            }
-          })
-        }
-      }
-    })
+
   },
 
   /**
@@ -52,7 +35,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    wx.getSetting({
+      success: res => {
+        console.log(res)
+        if (res.authSetting['scope.userInfo']) {
+          wx.getUserInfo({
+            success: function (res) {
+              console.log(res)
+              var userInfo = res.userInfo
+              that.setData({
+                avatarURL: userInfo.avatarUrl,
+                nickname: userInfo.nickName,
+              })
+            }
+          })
+        }
+      }
+    })
   },
 
   /**
@@ -93,6 +93,13 @@ Page({
   submit: function (e) {
     console.log(e)
     var that = this
+    if (that.data.title == ''){
+      wx.showToast({
+        title: '请输入标题',
+        icon: 'none'
+      })
+      return;
+    }
     wx.showLoading({
       title: '提交中',
     })
@@ -237,7 +244,9 @@ Page({
         that.setData({
           image: tempFilePaths
         })
-        console.log(that.data.image)
+        wx.showToast({
+          title: '附加图片成功',
+        })
       }
     })
   }

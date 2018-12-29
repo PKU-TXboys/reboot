@@ -1,7 +1,7 @@
 <!--pages/newtopic/newtopic.wxml-->
 <view class="outer">
   <view class="title">
-    <textarea type='text' confirm-type='done' bindinput='input_title' placeholder='请在此处输入问题'/>
+    <textarea type='text' confirm-type='done' bindinput='input_title' placeholder='请在此处输入标题'/>
   </view>
   <view class="description">
   <textarea type='text' confirm-type='done' bindinput='input_description' placeholder='请在此处输入问题描述'/>
