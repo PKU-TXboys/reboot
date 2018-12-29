@@ -83,10 +83,10 @@ Page({
         avatar: avatarUrl,
       },
       success: function (res) {
-        console.log(res.success)
+        console.log(res)
       },
       fail: function (res) {
-        console.error('[云函数] [adduser] 调用失败：', res.errMsg)
+        console.error('[云函数] [adduser] 调用失败：', res)
       }
     })
 
