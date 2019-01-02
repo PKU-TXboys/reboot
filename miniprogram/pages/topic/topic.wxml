@@ -38,12 +38,12 @@
                         <image class="wx-image_6E2A1o" data-c_e_id="wx_image5c6e2207" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png); "/>
                         <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text503770aa">235</text>
                     </view>
-                    <view class="wx-view_DKe6UT" data-c_e_id="wx_viewa8901d45">
+                    <!-- view class="wx-view_DKe6UT" data-c_e_id="wx_viewa8901d45">
                         <image class="wx-image_6E2A1o" data-c_e_id="wx_imageed28831e" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png); "/>
                         <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text11a516a4">143</text>
-                    </view>
+                    </view -->
                 </view>
-                <text class="c-block wx-text_9Wn0Di" data-c_e_id="wx_text3f27bb93">2天前</text>
+                <!-- text class="c-block wx-text_9Wn0Di" data-c_e_id="wx_text3f27bb93">2天前</text -->
             </view>
         </view>
     </view>
