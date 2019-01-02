@@ -36,6 +36,7 @@ Page({
       data: {},
       success: function (res) {
         console.log(res)
+        that.updateTime(res.result.topic_list)
         that.setData({
           topic_list: res.result.topic_list.reverse()
         })
