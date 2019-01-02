@@ -1,0 +1,11 @@
+<!--pages/authority/authority.wxml-->
+<view class="c-minheight wx-view_MgxPEf" data-c_e_id="wx_view_6951fc2c" width="100%">
+    <view class="c-minheight wx-view_e6v7zi" data-c_e_id="wx_view5ee86b7b"/>
+    <view class="c-minheight wx-view_e6v7zi" data-c_e_id="wx_view_86cf5135">
+        
+    </view>
+    <view class="c-minheight wx-view_e6v7zi" data-c_e_id="wx_view1e490c81"/>
+</view>
+<button open-type="getUserInfo" bindgetuserinfo='button_tap' style='width:80%;margin-bottom:10px;'> 获取个人信息 </button>
+
+

@@ -9,6 +9,7 @@ const _ = db.command;
 // 云函数入口函数
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
+  var openid = wxContext.OPENID;
   var nickname = event.nickname
   var avatarURL = event.avatarURL
   var content = event.content
@@ -19,12 +20,13 @@ exports.main = async (event, context) => {
         comment: _.push({
           nickname: nickname,
           avatarURL: avatarURL,
-          content: content
+          content: content,
+          _openid: openid,
+          like: []
         })
       }
     })
 
-    var openid = wxContext.OPENID;
     var user = await db.collection('Users').doc(openid).get();
     console.log(user);
     var flag = 1;

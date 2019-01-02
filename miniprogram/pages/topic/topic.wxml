@@ -24,7 +24,7 @@
                     <image class="wx-image_tBcdCT" data-c_e_id="wx_image9a4b5d06" mode="aspectFill" src="{{item[avatarURL]}}" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url({{item['avatarURL']}}); "/>
                     <view class="wx-view_cPj0ok" data-c_e_id="wx_viewe7d22733">
                         <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textc242c6b3">{{item['nickname']}}</text>
-                        <text class="c-block wx-text_LS2Jup" data-c_e_id="wx_text1b1fa35d">November 5, 1955</text>
+                        <text class="c-block wx-text_LS2Jup" data-c_e_id="wx_text1b1fa35d"></text>
                     </view>
                 </navigator>
             </view>
@@ -36,15 +36,16 @@
             <view class="wx-view_adF7Mw" data-c_e_id="wx_viewaae1fe30">
                 <view class="wx-view_2gazUr" data-c_e_id="wx_view1624e513">
                     <view class="wx-view_DKe6UT" data-c_e_id="wx_view4d891ef3">
-                        <image class="wx-image_6E2A1o" data-c_e_id="wx_image5c6e2207" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/a67f2e79e6ed8ae5bf46237d4f88a4e7_origin.png); "/>
-                        <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text503770aa">235</text>
+                        <image wx:if="{{like[index]}}" bindtap='clickLike' class="wx-image_6E2A1o" data-idx='{{index}}' mode="aspectFit" src="../../images/like.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat;"/>
+                        <image wx:else bindtap='clickLike' class="wx-image_6E2A1o" data-idx='{{index}}' mode="aspectFit" src="../../images/notlike.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat;"/>
+                        <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text503770aa">{{item['like'].length}}</text>
                     </view>
-                    <view class="wx-view_DKe6UT" data-c_e_id="wx_viewa8901d45">
+                    <!-- view class="wx-view_DKe6UT" data-c_e_id="wx_viewa8901d45">
                         <image class="wx-image_6E2A1o" data-c_e_id="wx_imageed28831e" mode="aspectFit" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png); "/>
                         <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text11a516a4">143</text>
-                    </view>
+                    </view -->
                 </view>
-                <text class="c-block wx-text_9Wn0Di" data-c_e_id="wx_text3f27bb93">2天前</text>
+                <!-- text class="c-block wx-text_9Wn0Di" data-c_e_id="wx_text3f27bb93">2天前</text -->
             </view>
         </view>
     </view>

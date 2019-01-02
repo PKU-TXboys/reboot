@@ -8,6 +8,7 @@ const db = cloud.database();
 // 云函数入口函数
 exports.main = async (event, context) => {
   var success = false;
+  var openid = event.userInfo.openId
   console.log(event, context)
   try {
     var res = await db.collection('Users').add({
@@ -21,12 +22,14 @@ exports.main = async (event, context) => {
       }
     })
     return {
-      success: true
+      success: true,
+      openid: openid
     }
   } catch (e) {
     console.error(e)
     return {
-      success: false
+      success: false,
+      openid: openid
     }
   }
 }

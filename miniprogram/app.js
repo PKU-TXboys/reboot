@@ -47,16 +47,32 @@ App({
                 }
               });
               that.globalData.avatar = avatarUrl;
+              that.globalData.nickName = nickName;
             }
           })
         }
       }
     })
+    wx.cloud.callFunction({
+      name: 'login',
+      data:{},
+      success: function(res){
+        that.globalData.openid = res.result.openid
+      },
+      fail: function(e){
+        wx.showToast({
+          title: '小程序故障',
+          icon: 'none',
+        })
+        console.log(e)
+      }
+    })
   },
 
   globalData:{
-    openid:'',
-    avatar:''
+    nickName: '',
+    openid: '',
+    avatar: ''
   }
 })
 

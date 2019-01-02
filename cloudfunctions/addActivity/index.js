@@ -30,6 +30,7 @@ exports.main = async (event, context) => {
     console.log(res);
   };
   return {
-    success: true
+    success: true,
+    openid: openid
   }
 }

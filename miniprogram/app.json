@@ -19,8 +19,8 @@
     "pages/reserve/reserve",
     "pages/newtopic/newtopic",
     "pages/reply/reply",
-    "pages/answer/answer"
-
+    "pages/answer/answer",
+    "pages/authority/authority"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

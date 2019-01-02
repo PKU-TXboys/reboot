@@ -24,13 +24,16 @@ APP
 | - forum					论坛页面
 |	| - topic				在讨论话题
 |	|	| - newtopic		发起新话题
+|	|	| - answer			回复话题
+|	|	| - reply			查看回复
 | - activitylist 			活动页面
 |	| - activity			活动信息
 |	| 	| - reserve			活动预约
 | - home					个人主页
 |	| - mytopic				我的话题
 |	| - myactivity			我的预约
-|	| - modify				修改信息
+| - authority				获取权限
+
 ```
 
 
@@ -40,9 +43,11 @@ APP
 ```json
 回帖信息comment
 {
-	"user":user_info,
+	"nickname":"str",
+    "avatarURL":"url",
 	"content":"str",
 	"img":["fileID"],
+    "like":["openid"]
 }
 
 讨论信息topic
@@ -59,26 +64,28 @@ APP
 
 论坛列表forum
 {
-	"list":[topics]
+	"topic_list":[topics]
 }
 
 个人信息user_info
 {
 	"open_id": "str",
-	"username": "str",
-	"pic": "url",
-	"watch_list":[topics],
-	"appointments":[appointments]
+	"nickN ame": "str",
+	"avatar": "url",
+	"mytopic":[topics],
+	"myactivity":[activities]
 }
 
 活动列表activity_list
 {
-	"list":[activities]
+	"activity_list":[activities]
 }
 
 活动信息activity
 {
-	"activity_id":1
+    "_id":"str",
+	"activity_id":1,
+    "openid":"str",
 	"title":"str",
 	"time":"date",
 	"description":"str",
@@ -89,12 +96,11 @@ APP
 预约信息appointment
 {
 	"name":"str",
-	"major":"str",
-	"grade":"str",
 	"time":"date",
 	"description":"str",
 	"computer":"str", //电脑型号
-	"phone_number":"str"
+	"contact":"str",
+    "type":"软件"
 }
 ```
 
@@ -103,19 +109,21 @@ APP
 APi列表
 
 获取论坛列表
-function getForumList
+function getActivity
 data:{}
-return:forum
+return:{
+    activity_list:[]
+}
 
 获取某个帖子信息
 function getTopic
 data:{
-	topic_id:1
+	topic_id:""
 }
 return:topic
 
 发帖 //上传数据库
-function topic
+function addTopic
 data:topic
 return:{
 	success:true
@@ -123,7 +131,7 @@ return:{
 }
 
 回帖
-function reply
+function answer
 data:{
 	reply
 	topic_id:1
@@ -132,6 +140,7 @@ return:{
 	success:true
 }
 
+/*
 改帖
 function modify
 data:{
@@ -151,6 +160,8 @@ data:{
 return:{
 	success:true
 }
+*/
+
 给帖子点赞
 function like
 data:{
@@ -161,7 +172,7 @@ return:{
 }
 
 获取活动列表
-function getActivityList
+function getActivity
 data:{}
 return:activity_list
 
@@ -173,7 +184,7 @@ data:{
 return:activity
 
 申请预约
-function makeAppointment
+function reserve
 data:{
 	activity_id:1
 	appointment
@@ -182,6 +193,7 @@ return{
 	success:true
 }
 
+/*
 修改预约
 function modifyAppointment
 data:{
@@ -201,6 +213,7 @@ data:{
 return:{
 	success:true
 }
+*/
 
 获取个人信息
 function getUserInfo
@@ -210,7 +223,7 @@ data:{
 return:user_info
 
 获取个人关注列表
-function getUserWatch
+function getMyTopic
 data:{
 	open_id:'sadsadsadas'
 }
@@ -219,7 +232,7 @@ return:{
 }
 
 获取个人预约活动列表
-function getUserAppointment
+function getMyActivity
 data:{
 	open_id:'saddsadasds'
 }

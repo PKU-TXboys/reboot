@@ -5,7 +5,7 @@
     </view>
     <view class="c-minheight wx-view_e6v7zi" data-c_e_id="wx_view1e490c81"/>
 </view>
-<button open-type="getUserInfo" bindgetuserinfo='button_tap' hidden='{{hidden}}' style='width:80%;margin-bottom:10px;'> 获取个人信息 </button>
+<!--button open-type="getUserInfo" bindgetuserinfo='button_tap' hidden='{{hidden}}' style='width:80%;margin-bottom:10px;'> 获取个人信息 </button-->
 <text class="c-block wx-text_LxIAqX" data-c_e_id="wx_text_d9b4876d">{{nickname}}</text>
 <view class="c-minheight wx-view_7ini1F" data-c_e_id="wx_view_0ea40752"/>
 <view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewade02125">
