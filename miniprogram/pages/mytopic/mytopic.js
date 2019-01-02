@@ -116,11 +116,11 @@ Page({
       //日  
       var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
       //时
-      var h = date.getHours();
+      var h = date.getHours() < 10 ? '0' + date.getHours() : date.getHours();
       //分
-      var m = date.getMinutes();
+      var m = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
       //秒
-      var s = date.getSeconds();
+      var s = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
 
       list[i].year = Y;
       list[i].month = M;

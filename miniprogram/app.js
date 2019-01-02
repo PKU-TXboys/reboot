@@ -3,6 +3,8 @@ var coolsite360 = require('./coolsite/index.js');
 
 App({
   onLaunch: function () {
+
+    var that = this;
     
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
@@ -11,6 +13,22 @@ App({
         traceUser: true,
       })
     }
+
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: function (res) {
+        that.globalData.openid = res.result.openid
+      },
+      fail: function (e) {
+        wx.showToast({
+          title: '小程序故障',
+          icon: 'none',
+        })
+        console.log(e)
+      }
+    })
+
     this.update();
   },
 
@@ -51,20 +69,11 @@ App({
             }
           })
         }
-      }
-    })
-    wx.cloud.callFunction({
-      name: 'login',
-      data:{},
-      success: function(res){
-        that.globalData.openid = res.result.openid
-      },
-      fail: function(e){
-        wx.showToast({
-          title: '小程序故障',
-          icon: 'none',
-        })
-        console.log(e)
+        else{
+          wx.navigateTo({
+            url: '../authority/authority',
+          })
+        }
       }
     })
   },
