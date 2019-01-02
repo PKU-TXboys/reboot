@@ -81,7 +81,22 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh () {
-    
+    var that = this;
+    wx.cloud.callFunction({
+      name: 'getTopic',
+      data: {},
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          topic_list: res.result.data.reverse()
+        });
+        wx.stopPullDownRefresh();
+      },
+      fail: function () {
+        console.log("fail to get topic_list")
+
+      }
+    })
   },
 
 
