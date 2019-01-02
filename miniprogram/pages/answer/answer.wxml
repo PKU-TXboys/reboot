@@ -4,6 +4,6 @@
   </view>
 </view>
 <view class="bottom">
-    <view class="picture"><image src='../../images/camera.png' mode='aspectFit' style='width:50%;height:100%;margin-left:25%'/></view>
+    <view class="picture"><image src='../../images/keyboard0.png' mode='aspectFit' style='width:50%;height:100%;margin-left:25%'/></view>
     <botton bindtap='submit' class="post"><image src='../../images/post4.png' mode='aspectFit' style='width:50%;height:100%;margin-left:30%'/></botton>
   </view>
