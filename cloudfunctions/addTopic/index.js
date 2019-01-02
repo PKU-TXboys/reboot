@@ -12,6 +12,7 @@ exports.main = async (event, context) => {
   var nickname = event.owner.nickname
   var avatarURL = event.owner.avatarURL
   var image = event.image
+  var time = event.time
   var res
   var openid = event.userInfo.openId
 
@@ -29,7 +30,8 @@ exports.main = async (event, context) => {
         },
         "image": image,
         "comment": [],
-        "like": 0
+        "like": 0,
+        "time": time
       }
     });
     console.log(res)

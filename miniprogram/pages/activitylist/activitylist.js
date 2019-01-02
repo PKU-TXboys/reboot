@@ -52,10 +52,14 @@ Page({
         });
       },
       fail: function () {
-        console.log("fail to get topic_list")
+        wx.showToast({
+          title: '没有活动',
+          icon: 'none'
+        })
         that.setData({
           activity_list: []
         });
+        wx.stopPullDownRefresh();
       }
     })
   },

@@ -52,6 +52,7 @@ Page({
       data:{},
       success: function (res) {
         console.log(res);
+        that.updateTime(res.result.data)
         that.setData({
           topic_list: res.result.data.reverse(),
         });
@@ -90,6 +91,7 @@ Page({
       data: {},
       success: function (res) {
         console.log(res);
+        that.updateTime(res.result.data)
         that.setData({
           topic_list: res.result.data.reverse()
         });
@@ -97,15 +99,45 @@ Page({
       },
       fail: function () {
         console.log("fail to get topic_list")
+        wx.showToast({
+          title: '没有发帖',
+          icon: 'none'
+        })
         that.setData({
           topic_list: []
         });
+        wx.stopPullDownRefresh();
       }
     })
   },
 
 
   //以下为自定义点击事件
-  
+  updateTime: function(list){
+    for (var i = 0; i < list.length; i++)
+    {
+      var timestamp = list[i].time;
+      var date = new Date(timestamp)
+      //年
+      var Y = date.getFullYear();
+      //月  
+      var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+      //日  
+      var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+      //时
+      var h = date.getHours();
+      //分
+      var m = date.getMinutes();
+      //秒
+      var s = date.getSeconds();
+
+      list[i].year = Y;
+      list[i].month = M;
+      list[i].day = D;
+      list[i].hour = h;
+      list[i].minute = m;
+      list[i].second = s;
+    }
+  }
 })
 

@@ -41,7 +41,7 @@
                         <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text11a516a4">{{item['comment'].length > 99 ? "99+" : item['comment'].length}}</text>
                     </view>
                 </view>
-                <!-- text class="c-block wx-text_9Wn0Di" data-c_e_id="wx_text3f27bb93">1小时前</text -->
+                <text class="c-block wx-text_9Wn0Di" data-c_e_id="wx_text3f27bb93">{{item.year + '-' + item.month + '-' + item.day + ' ' + item.hour + ':' + item.minute + ':' + item.second}}</text>
             </view>
         </view>
     </view>
