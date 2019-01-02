@@ -53,7 +53,9 @@ Page({
       },
       fail: function () {
         console.log("fail to get topic_list")
-
+        that.setData({
+          activity_list: []
+        });
       }
     })
   },
@@ -89,7 +91,9 @@ Page({
       },
       fail: function () {
         console.log("fail to get topic_list")
-
+        that.setData({
+          activity_list: []
+        });
       }
     })
   },
