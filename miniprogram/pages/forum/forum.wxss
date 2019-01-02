@@ -19,6 +19,7 @@
   flex-direction:row;
   width:90%;
   margin:2px;
+  margin-left: 37.5rpx;
 }
 .search_contains{
   text-align: center;
@@ -36,6 +37,7 @@
   display:flex;
   justify-content:center;
   align-items:center;
+  margin-right:37.5rpx;
 }
 .empty{
   color:darkgrey;
