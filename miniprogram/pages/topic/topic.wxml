@@ -20,7 +20,7 @@
     <view class="wx-view_JbWxfk" data-c_e_id="wx_view36a5f58d">
         <view class="carditem01" data-c_e_id="wx_view2f47d002">
             <view class="wx-view_QvvUkU" data-c_e_id="wx_view9a26c020">
-                <navigator class="wx-navigator_rv4BGW" data-c_e_id="wx_navigator3a0627f6" hover-class="navigator-hover" url="../reply/reply?title={{topic_data['title']}}&content={{item['content']}}&avatarURL={{item['avatarURL']}}&nickname={{item['nickname']}}">
+                <navigator class="wx-navigator_rv4BGW" data-c_e_id="wx_navigator3a0627f6" hover-class="navigator-hover">
                     <image class="wx-image_tBcdCT" data-c_e_id="wx_image9a4b5d06" mode="aspectFill" src="{{item[avatarURL]}}" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url({{item['avatarURL']}}); "/>
                     <view class="wx-view_cPj0ok" data-c_e_id="wx_viewe7d22733">
                         <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textc242c6b3">{{item['nickname']}}</text>
@@ -28,8 +28,12 @@
                     </view>
                 </navigator>
             </view>
-            <navigator class="wx-navigator_PNd8QQ" data-c_e_id="wx_navigator860bf338" hover-class="navigator-hover" url="../reply/reply">
+            <navigator class="wx-navigator_PNd8QQ" data-c_e_id="wx_navigator860bf338" hover-class="navigator-hover">
                 <view class="wx-view_KedDbI" data-c_e_id="wx_view1bcd6050">
+                <view wx:for="{{item['image']}}" wx:for-item="image">
+                <image bindtap='click_image' data-url='{{image}}' mode="aspectFill" src="{{image}}"/>
+                </view>
+                
                     <text class="c-block wx-text_6zTs4l" data-c_e_id="wx_textcdf69eb9">{{item['content']}}</text>
                 </view>
             </navigator>
