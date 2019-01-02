@@ -153,7 +153,14 @@ Page({
         console.log("like fail: ", e)
       }
     })
+  },
+
+  click_image: function (e) {
+    console.log(e);
+    var url = [e.currentTarget.dataset.url]
+    wx.previewImage({
+      urls: url,
+    })
   }
-  
 })
 
