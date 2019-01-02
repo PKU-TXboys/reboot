@@ -1,5 +1,5 @@
 <view class="outer">
-  <view style='margin-top:10%'>
+  <view wx:if="{{topic_list.length>0}}" style='margin-top:10%'>
     <view class="wx-view_JbWxfk" data-c_e_id="wx_view36a5f58d" wx:for = "{{topic_list}}">
         <view class="carditem01" data-c_e_id="wx_view2f47d002">
             <view class="wx-view_QvvUkU" data-c_e_id="wx_view9a26c020">
@@ -32,6 +32,10 @@
             </view>
         </view>
     </view>
+  </view>
+  <view wx:else style='margin-top:60%;text-align:center'>
+    <text class='empty'>Ooops,you have no topic now...\n</text>
+    <text class='empty'>Start one!</text>
   </view>
 
   

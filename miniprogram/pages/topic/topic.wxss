@@ -10,9 +10,11 @@ page{
 }
 .top{
   background-color: white;
-  height: 15%;
   margin:5%;
+  padding:2%;
   border-radius: 20rpx;
+  display:flex;
+  flex-direction: column;
 }
 .title{
   background-color: white;

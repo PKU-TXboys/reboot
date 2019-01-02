@@ -1,1 +1,6 @@
 /* pages/activity/activity.wxss */
+.empty{
+  color:darkgrey;
+  font-size:medium;
+  font-weight:400;
+}

@@ -4,6 +4,7 @@
   flex-direction: column;
 }
 .top_outer{
+  margin:3px;
   position: fixed;
   top:0%;
   display:flex;
@@ -35,4 +36,9 @@
   display:flex;
   justify-content:center;
   align-items:center;
+}
+.empty{
+  color:darkgrey;
+  font-size:medium;
+  font-weight:400;
 }

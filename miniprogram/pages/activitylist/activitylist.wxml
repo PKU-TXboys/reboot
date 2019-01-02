@@ -1,4 +1,4 @@
-<view class="listWrap" data-c_e_id="wx_view_73b58de5">
+<view wx:if="{{activity_list.length>0}}" class="listWrap" data-c_e_id="wx_view_73b58de5">
     <view class="listitem01" data-c_e_id="wx_viewd43566f3">
       <block wx:for='{{activity_list}}' wx:key='{{activity_id}}'>
         <navigator class="listitem-navigator" data-c_e_id="wx_navigatorb90d9a0d" hover-class="navigator-hover" url="../activity/activity?id={{item._id}}">
@@ -10,4 +10,8 @@
         </navigator>
       </block>
     </view>
+</view>
+<view wx:else style='margin-top:60%;text-align:center'>
+  <text class='empty'>Ooops,there is no topic now...\n</text>
+  <text class='empty'>You can pull to refresh</text>
 </view>

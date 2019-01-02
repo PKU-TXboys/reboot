@@ -53,8 +53,9 @@ Page({
       success: function (res) {
         console.log(res);
         that.setData({
-          topic_list: res.result.data.reverse()
+          topic_list: res.result.data.reverse(),
         });
+        console.log(res.result.data.length);
       },
       fail: function () {
         console.log("fail to get topic_list")

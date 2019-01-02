@@ -84,6 +84,13 @@ Page({
 
 
   //以下为自定义点击事件
-  
+  click_image:function(e)
+  {
+    console.log(e);
+    var url = [e.currentTarget.dataset.url]
+    wx.previewImage({
+      urls: url,
+    })
+  }
 })
 

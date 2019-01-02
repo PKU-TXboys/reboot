@@ -1,9 +1,10 @@
 <view class="outer">
   <view class="top">
-    <view class="wx-view_cPj0ok" data-c_e_id="wx_viewe7d22733">
-                        <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textc242c6b3" style='font-weight:700'>{{topic_data['title']}}</text>
-                        <text class="c-block wx-text_LS2Jup" data-c_e_id="wx_text1b1fa35d">{{topic_data['description']}}</text>
-                    </view>
+      <text style='font-weight:700;font-size:larger;padding:2%'>{{topic_data['title']}}</text>
+      <view wx:for="{{topic_data['image']}}">
+        <image bindtap='click_image' data-url='{{item}}' mode="aspectFill" src="{{item}}"/>
+      </view>
+      <text style='font-size:small;padding:2%'>{{topic_data['description']}}</text>
   </view>
 
   <view class="middle">
