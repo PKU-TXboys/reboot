@@ -1,4 +1,6 @@
 // pages/authority/authority.js
+const app = getApp();
+
 Page({
 
   /**
@@ -12,7 +14,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    wx.getSetting({
+      success: res => {
+        console.log(res)
+        if (res.authSetting['scope.userInfo']) {
+          wx.switchTab({
+            url: '../forum/forum',
+          })
+        }
+      }
+    })
   },
 
   /**
@@ -87,6 +99,10 @@ Page({
       },
       fail: function (res) {
         console.error('[云函数] [adduser] 调用失败：', res)
+        wx.showToast({
+          title: '小程序故障，请稍后再试',
+          icon: 'none'
+        })
       }
     })
 
@@ -98,5 +114,8 @@ Page({
     });
     app.globalData.avatar = avatarUrl;
     app.globalData.nickName = nickName;
+    wx.switchTab({
+      url: '../forum/forum',
+    })
   }
 })

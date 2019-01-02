@@ -6,6 +6,6 @@
     </view>
     <view class="c-minheight wx-view_e6v7zi" data-c_e_id="wx_view1e490c81"/>
 </view>
-<button open-type="getUserInfo" bindgetuserinfo='button_tap' hidden='{{hidden}}' style='width:80%;margin-bottom:10px;'> 获取个人信息 </button>
+<button open-type="getUserInfo" bindgetuserinfo='button_tap' style='width:80%;margin-bottom:10px;'> 获取个人信息 </button>
 
 
