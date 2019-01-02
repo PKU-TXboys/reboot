@@ -18,7 +18,7 @@ Page({
 
   data: {
     topic_data: {},
-    hide: true,
+    like: false,
     id: ''
   },
 
@@ -84,6 +84,26 @@ Page({
 
 
   //以下为自定义点击事件
+  clickLike: function(e){
+    var that = this
+    console.log(e);
+    wx.cloud.callFunction({
+      name: 'like',
+      data:{
+        topic_id: that.data.topic_data._id,
+        idx: e.currentTarget.dataset.idx
+      },
+      success:function(e){
+        console.log('success', e)
+        that.setData({
+          topic_data:data
+        })
+      },
+      fail: function(e){
+        console.log("like fail: ", e)
+      }
+    })
+  }
   
 })
 
