@@ -70,8 +70,8 @@ App({
           })
         }
         else{
-          wx.navigateTo({
-            url: '../authority/authority',
+          wx.redirectTo({
+            url: '/pages/authority/authority',
           })
         }
       }
