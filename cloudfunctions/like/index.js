@@ -9,20 +9,27 @@ const _ = db.command;
 // 云函数入口函数
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
-  var openid = wxContext.APPID
+  var openid = wxContext.OPENID
   var topic_id = event.topic_id
   var idx = event.idx
   var res
 
   res = await db.collection('topic_list').doc(topic_id).get();
+  console.log(res)
   var l = res.data.comment[idx].like
+  console.log(l)
   var flag = 0
   for (var i = 0; i < l.length; i++)
   {
-    if(l[i]._openid == openid)
+    if(l[i] == openid)
     {
-      l[i].splice(i, 1)
+      l.splice(i, 1)
       flag = 1
+      var update = await db.collection('topic_list').doc(topic_id).update({
+        data:{
+          comment: res.data.comment
+        }
+      })
       return {
         success: true,
         data: res.data
@@ -32,6 +39,11 @@ exports.main = async (event, context) => {
   }
   if(flag == 0){
     l.push(openid)
+    var update = await db.collection('topic_list').doc(topic_id).update({
+      data: {
+        comment: res.data.comment
+      }
+    })
     return {
       success: true,
       data: res.data

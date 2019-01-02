@@ -18,7 +18,7 @@ Page({
 
   data: {
     topic_data: {},
-    like: false,
+    like: [],
     id: ''
   },
 
@@ -49,13 +49,38 @@ Page({
     // 执行coolsite360交互组件展示
     app.coolsite360.onShow(this);
     var that = this
+    console.log(app.globalData.openid)
+    var openid = app.globalData.openid
+    var like = []
+
     db.collection('topic_list').where({
       _id : that.data.id
     }).get({
       success: function (res) {
         console.log(res.data)
+        var list = res.data[0].comment
+        var flag
+        for(var i = 0; i < list.length; i++)
+        {
+          flag = 0
+          for(var j = 0; j < list[i].like.length; j++)
+          {
+            if(openid == list[i].like[j])
+            {
+              flag = 1
+              like.push(true)
+              break;
+            }
+          }
+          if(flag == 0)
+          {
+            like.push(false)
+          }
+        }
+        console.log(like)
         that.setData({
-          topic_data: res.data[0]
+          topic_data: res.data[0],
+          like: like
         })
       }
     })
@@ -87,16 +112,41 @@ Page({
   clickLike: function(e){
     var that = this
     console.log(e);
+    var idx = e.currentTarget.dataset.idx
+    var like = that.data.like
+    like[idx] = !like[idx]
+    this.setData({
+      like: like
+    })
     wx.cloud.callFunction({
       name: 'like',
       data:{
         topic_id: that.data.topic_data._id,
-        idx: e.currentTarget.dataset.idx
+        idx: idx
       },
       success:function(e){
         console.log('success', e)
+        var like = []
+        var openid = app.globalData.openid
+        var list = e.result.data.comment
+        var flag
+        for (var i = 0; i < list.length; i++) {
+          flag = 0
+          for (var j = 0; j < list[i].like.length; j++) {
+            if (openid == list[i].like[j]) {
+              flag = 1
+              like.push(true)
+              break;
+            }
+          }
+          if (flag == 0) {
+            like.push(false)
+          }
+        }
+        console.log(like)
         that.setData({
-          topic_data:data
+          topic_data: e.result.data,
+          like: like
         })
       },
       fail: function(e){

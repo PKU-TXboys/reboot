@@ -42,14 +42,16 @@ exports.main = async (event, context) => {
     console.log(res)
     return {
       errmsg: res,
-      success: true
+      success: true,
+      openid: openid
     }
   }
   catch (e) {
     console.error(e)
     return {
       errmsg: e,
-      success: false
+      success: false,
+      openid: openid
     }
   }
 

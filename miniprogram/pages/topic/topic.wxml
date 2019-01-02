@@ -35,7 +35,7 @@
             <view class="wx-view_adF7Mw" data-c_e_id="wx_viewaae1fe30">
                 <view class="wx-view_2gazUr" data-c_e_id="wx_view1624e513">
                     <view class="wx-view_DKe6UT" data-c_e_id="wx_view4d891ef3">
-                        <image wx:if="like" bindtap='clickLike' class="wx-image_6E2A1o" data-idx='{{index}}' mode="aspectFit" src="../../images/like.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat;"/>
+                        <image wx:if="{{like[index]}}" bindtap='clickLike' class="wx-image_6E2A1o" data-idx='{{index}}' mode="aspectFit" src="../../images/like.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat;"/>
                         <image wx:else bindtap='clickLike' class="wx-image_6E2A1o" data-idx='{{index}}' mode="aspectFit" src="../../images/notlike.png" style="background-size: contain; background-position: center center; background-repeat: no-repeat;"/>
                         <text class="c-block wx-text_id0VJj" data-c_e_id="wx_text503770aa">{{item['like'].length}}</text>
                     </view>

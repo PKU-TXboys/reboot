@@ -11,6 +11,7 @@ exports.main = async (event, context) => {
   const batchTimes = Math.ceil(total / 100)
   // 承载所有读操作的 promise 的数组
   const tasks = []
+  var openid = event.userInfo.openId;
   for (let i = 0; i < batchTimes; i++) {
     const promise = db.collection('topic_list').skip(i * MAX_LIMIT).limit(MAX_LIMIT).get()
     tasks.push(promise)
@@ -19,5 +20,6 @@ exports.main = async (event, context) => {
   return (await Promise.all(tasks)).reduce((acc, cur) => ({
     topic_list: acc.data.concat(cur.data),
     errMsg: acc.errMsg,
+    openid: openid
   }))
 }
