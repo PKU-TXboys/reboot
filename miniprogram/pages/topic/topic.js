@@ -46,6 +46,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow () {
+    wx.hideShareMenu()
     // 执行coolsite360交互组件展示
     app.coolsite360.onShow(this);
     var that = this

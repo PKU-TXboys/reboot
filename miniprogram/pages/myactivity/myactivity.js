@@ -26,6 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    wx.hideShareMenu()
     var that = this;
     wx.cloud.callFunction({
       name: 'getMyActivity',
@@ -36,9 +37,14 @@ Page({
           activity_list: res.result.activity_list
         })
       },
-      fail: function(res){
-        console.log(res)
-        console.log('failed');
+      fail: function () {
+        wx.showToast({
+          title: '没有活动',
+          icon: 'none'
+        })
+        that.setData({
+          activity_list: []
+        });
       }
     })
   },
@@ -61,7 +67,27 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    var that = this;
+    wx.cloud.callFunction({
+      name: 'getMyActivity',
+      data: {},
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          activity_list: res.result.activity_list
+        })
+      },
+      fail: function () {
+        wx.showToast({
+          title: '没有活动',
+          icon: 'none'
+        })
+        that.setData({
+          activity_list: []
+        });
+        wx.stopPullDownRefresh()
+      }
+    })
   },
 
   /**

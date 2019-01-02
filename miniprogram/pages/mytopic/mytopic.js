@@ -29,6 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    wx.hideShareMenu()
     var that = this;
     wx.cloud.callFunction({
       name: 'getMyTopic',
@@ -64,7 +65,30 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    var that = this;
+    wx.cloud.callFunction({
+      name: 'getMyTopic',
+      data: {},
+      success: function (res) {
+        console.log(res)
+        that.updateTime(res.result.topic_list)
+        that.setData({
+          topic_list: res.result.topic_list.reverse()
+        })
+        wx.stopPullDownRefresh();
+      },
+      fail: function (res) {
+        wx.showToast({
+          title: '没有发帖',
+          icon: 'none'
+        })
+        console.log('failed');
+        that.setData({
+          topic_list: []
+        });
+        wx.stopPullDownRefresh();
+      }
+    })
   },
 
   /**
@@ -79,5 +103,31 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  updateTime: function (list) {
+    for (var i = 0; i < list.length; i++) {
+      var timestamp = list[i].time;
+      var date = new Date(timestamp)
+      //年
+      var Y = date.getFullYear();
+      //月  
+      var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+      //日  
+      var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+      //时
+      var h = date.getHours();
+      //分
+      var m = date.getMinutes();
+      //秒
+      var s = date.getSeconds();
+
+      list[i].year = Y;
+      list[i].month = M;
+      list[i].day = D;
+      list[i].hour = h;
+      list[i].minute = m;
+      list[i].second = s;
+    }
   }
 })
