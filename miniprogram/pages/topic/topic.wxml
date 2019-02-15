@@ -12,6 +12,7 @@
       <text style='font-weight:700;font-size:small'>{{topic_data['comment'].length}}个回答</text>
     </view>
     <navigator class="edit" url="../answer/answer?id={{id}}" >
+      <text style='width: 70%;'> 写回复 </text>
       <image src="../../images/new.png" mode='aspectFit' style='width:70%;height:70%;'/>
     </navigator>
   </view>

@@ -12,6 +12,6 @@
     </view>
 </view>
 <view wx:else style='margin-top:60%;text-align:center'>
-  <text class='empty'>Ooops,there is no topic now...\n</text>
-  <text class='empty'>You can pull to refresh</text>
+  <text class='empty'>Ooops,there is no activity now...\n</text>
+  <text class='empty'>Come and see later~</text>
 </view>

@@ -8,7 +8,7 @@
       </view>
     </view>
     <navigator class="new" url="../newtopic/newtopic" >
-      <image src="../../images/new.png" mode='aspectFit' style='width:70%;height:70%;'/>
+      <image src="../../images/add_topic.png" mode='aspectFit' style='width:70%;height:70%;'/>
     </navigator>
   </view>
 

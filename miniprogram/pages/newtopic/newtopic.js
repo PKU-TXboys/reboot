@@ -108,6 +108,7 @@ Page({
     var imageUrls = []
     var time = Date.parse(new Date())
     if(that.data.image.length != 0){
+      /* 如果有多张图片 */
       // for (var i = 0; i < that.data.image.length; i++)
       // {
       //   var t = that.data.image[i].split('/')
@@ -140,10 +141,9 @@ Page({
       var t = that.data.image[0].split('/')
       var filename = t[t.length - 1]
       
-
       console.log(filename, time)
       wx.cloud.uploadFile({
-        cloudPath: filename, // 上传至云端的路径
+        cloudPath: 'forum_images/' + filename, // 上传至云端的路径
         filePath: that.data.image[0], // 小程序临时文件路径
         success: res => {
           // 返回文件 ID

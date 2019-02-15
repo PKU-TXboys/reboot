@@ -18,7 +18,8 @@ exports.main = async (event, context) => {
         nickName: event.nickName,
         avatar: event.avatarUrl,
         mytopic: [],
-        myactivity: []
+        myactivity: [],
+        isManager: false
       }
     })
     return {
