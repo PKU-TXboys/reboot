@@ -16,6 +16,11 @@ page{
   display:flex;
   flex-direction: column;
 }
+.top-image{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
 .title{
   background-color: white;
   margin:1%;

@@ -1,10 +1,16 @@
 <!--pages/newtopic/newtopic.wxml-->
 <view class="outer">
   <view class="title">
-    <textarea type='text' confirm-type='done' bindinput='input_title' placeholder='请在此处输入标题'/>
+    <view class='textholder'>
+      <textarea type='text' confirm-type='done' bindinput='input_title' placeholder='请在此处输入标题'/>
+    </view>
   </view>
   <view class="description">
-  <textarea type='text' confirm-type='done' bindinput='input_description' placeholder='请在此处输入问题描述'/>
+    <view class='textholder'>
+      <textarea type='text' confirm-type='done' maxlength='-1' bindinput='input_description' placeholder='请在此处输入问题描述' auto-focus/>
+    </view>
+  </view>
+  <view class='placeholder'>
   </view>
 </view>
 <view class="bottom">
