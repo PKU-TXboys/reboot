@@ -8,6 +8,15 @@
 .title{
   background-color: white;
 }
+.title .textholder{
+  height: 100%;
+  width: 100%;
+}
+.title .textholder textarea{
+  height: 90%;
+  width: 90%;
+  padding: 5%;
+}
 .reply{
   background-color:white;
   margin:1%;

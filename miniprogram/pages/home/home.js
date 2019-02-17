@@ -21,7 +21,7 @@ Page({
     nickname: 'name',
     gender: 0,
     avatar: 'http://qty83k.creatby.com/materials/136955/origin/ad607ddde1e291de9b19049db1817561_origin.jpg',
-  
+    isManager: false,
   },
 
   /**
@@ -74,7 +74,7 @@ Page({
                 nickname: nickName,
                 gender: gender,
                 avatar: avatarUrl,
-                hidden: true
+                hidden: true,
               });
               app.globalData.avatar = avatarUrl;
               app.globalData.nickName = nickName;

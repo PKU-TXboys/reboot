@@ -18,7 +18,7 @@
     "pages/activitylist/activitylist",
     "pages/reserve/reserve",
     "pages/newtopic/newtopic",
-    "pages/reply/reply",
+    "pages/newactivity/newactivity",
     "pages/answer/answer",
     "pages/authority/authority"
   ],

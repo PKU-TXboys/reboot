@@ -1,9 +1,12 @@
 <!--pages/newtopic/newtopic.wxml-->
 <view class="outer">
   <view class="title">
-    <text class="c-block wx-text_TvHPc9" data-c_e_id="wx_textc242c6b3" style='font-weight:700'>
+  <view class=''>
+    <textarea class="c-block wx-text_TvHPc9" data-c_e_id="wx_textc242c6b3" style='font-weight:700'>
       {{title}}
-    </text>
+    </textarea>
+  </view>
+
   </view>
   <view class="reply">
     <view class="wx-navigator_rv4BGW" data-c_e_id="wx_navigator757cc40e" hover-class="navigator-hover" >

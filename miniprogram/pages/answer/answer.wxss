@@ -2,10 +2,19 @@
   height:93%;
 }
 .description{
-  height:100%;
+  height:93%;
   background-color: gainsboro;
   border-radius: 20rpx;
   margin:5%
+}
+.description .textholder{
+  height: 100%;
+  width: 100%;
+}
+.description .textholder textarea{
+  height: 90%;
+  width: 90%;
+  padding: 5%;
 }
 .bottom{
   height:7%;
@@ -21,4 +30,9 @@
 }
 .post{
   width:50%;
+}
+.placeholder{
+  height:7%;
+  width:100%;
+  background-color: white;
 }

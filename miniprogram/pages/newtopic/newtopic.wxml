@@ -2,7 +2,7 @@
 <view class="outer">
   <view class="title">
     <view class='textholder'>
-      <textarea type='text' confirm-type='done' bindinput='input_title' placeholder='请在此处输入标题'/>
+      <textarea type='text' maxlength='20' confirm-type='done' bindinput='input_title' placeholder='请在此处输入标题，不超过20个字'/>
     </view>
   </view>
   <view class="description">

@@ -98,6 +98,15 @@ Page({
     var nickname = that.data.nickname
     var avatarURL = that.data.avatarURL
     var comment = that.data.comment
+    if(comment.length == 0)
+    {
+      wx.showToast({
+        title: '回复不能为空',
+        icon: 'none',
+        duration: 1000,
+      })
+      return;
+    }
     console.log(that.data.id, nickname, avatarURL, comment)
     wx.showLoading({
       title: '提交中',

@@ -22,6 +22,13 @@
         </view>
     </navigator>
 </view>
+<view wx:if="{{isManager}}" class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewade02125">
+    <navigator class="listitem-navigator" data-c_e_id="wx_navigator198e0fe6" hover-class="navigator-hover" url="../newactivity/newactivity">
+        <view class="wx-view_cPj0ok2" data-c_e_id="wx_view916d4e22">
+            <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text48cdb073">我预约的活动</text>
+        </view>
+    </navigator>
+</view>
 
 <!-->
 <button bindtap='add'>123</button>
