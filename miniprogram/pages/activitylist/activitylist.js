@@ -50,9 +50,17 @@ Page({
       data: {},
       success: function (res) {
         console.log(res);
-        that.setData({
-          activity_list: res.result.data.reverse()
-        });
+        if (res.result.activity_list.length == 0) {
+          wx.showToast({
+            title: '没有活动',
+            icon: 'none'
+          })
+        }
+        else {
+          that.setData({
+            activity_list: res.result.activity_list.reverse()
+          });
+        }
       },
       fail: function () {
         wx.showToast({
@@ -90,9 +98,19 @@ Page({
       data: {},
       success: function (res) {
         console.log(res);
-        that.setData({
-          activity_list: res.result.data.reverse()
-        });
+        if (res.result.activity_list.length == 0)
+        {
+          wx.showToast({
+            title: '没有活动',
+            icon: 'none'
+          })
+        }
+        else
+        {
+          that.setData({
+            activity_list: res.result.activity_list.reverse()
+          });
+        }
         wx.stopPullDownRefresh();
       },
       fail: function () {
