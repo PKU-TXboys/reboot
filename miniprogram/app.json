@@ -52,5 +52,6 @@
     ],
     "backgroundColor": "#f6f6f6",
     "selectedColor": "lightgreen"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
